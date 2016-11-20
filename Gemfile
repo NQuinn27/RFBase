@@ -51,3 +51,5 @@ gem 'bootstrap-sass', '~> 3.3'
 gem 'ckeditor', '~> 4.1'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 gem "html_truncator", "~>0.2"
+gem 'haml'
+gem 'devise'

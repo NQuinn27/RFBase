@@ -1,0 +1,34 @@
+!!! 5
+%html
+  %head
+    %title RM Platform
+    = csrf_meta_tags
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+  %body
+    #navbar.navbar-collapse
+      .navbar-header
+        %a.navbar-brand{:href => "#"} RM Platform
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => "#"}Log In
+    #wrapper
+      #sidebar-wrapper
+        %ul.sidebar-nav
+          %li
+            %a#posts_menu_item{:href => posts_path} Posts
+          %li
+            %a#media_menu_item{:href => "#"} Media
+          %li
+            %a#social_menu_item{:href => "#"} Social
+          %li
+            %a#social_menu_item{:href => "#"} Theme
+      #page-content-wrapper
+        .container-fluid
+          = yield
+    :javascript
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#toggle_button").toggleClass("toggled");
+      });
