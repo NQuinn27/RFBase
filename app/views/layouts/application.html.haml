@@ -11,7 +11,8 @@
         %a.navbar-brand{:href => "#"} RM Platform
       %ul.nav.navbar-nav.navbar-right.hmenu
         - if customer_admin_signed_in?
-          %li= link_to('Logout', destroy_customer_admin_session_path, :method => :delete)
+          %li= "#{current_customer_admin.first_name} #{current_customer_admin.last_name}"
+          %li= link_to('Log Out', destroy_customer_admin_session_path, :method => :delete, :type => 'button', :class => 'logout')
         - else
           %li= link_to('Login', new_customer_admin_session_path)
     #wrapper

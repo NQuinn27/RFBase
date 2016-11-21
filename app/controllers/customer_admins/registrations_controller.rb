@@ -44,7 +44,7 @@ class CustomerAdmins::RegistrationsController < Devise::RegistrationsController
   # If you have extra params to permit, append them to the sanitizer.
 
   def sign_up_params
-    params.require(:customer_admin).permit(:email, :password, :password_confirmation, :customer_id)
+    params.require(:customer_admin).permit(:email, :password, :password_confirmation, :customer_id, :first_name, :last_name)
   end
 
   # If you have extra params to permit, append them to the sanitizer.

@@ -1,9 +1,10 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:edit, :update, :show, :delete]
   before_action :authenticate_customer_admin!
+  before_action :current_customer
   # Index action to render all posts
   def index
-    @posts = Post.all
+    @posts = @current_customer.posts
   end
 
   # New action for creating post
@@ -14,6 +15,7 @@ class PostsController < ApplicationController
   # Create action saves the post into database
   def create
     @post = Post.new(post_params)
+    @post.customer = @current_customer
     if @post.save
       flash[:notice] = "Successfully created post!"
       redirect_to post_path(@post)
@@ -60,5 +62,13 @@ class PostsController < ApplicationController
 
   def find_post
     @post = Post.find(params[:id])
+  end
+
+  def current_customer
+    @current_customer = Customer.find(current_customer_admin.customer_id)
+  end
+
+  def posts_for_customer
+    @posts_for_customer = Post.all(:conditions => { :customer_id => current_customer_admin.customer_id })
   end
 end

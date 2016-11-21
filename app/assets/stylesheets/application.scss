@@ -246,9 +246,22 @@ body {
   padding: 20px;
   .navbar-brand {
     color:white !important;
+    padding-top: 15px;
   }
   a {
     color: white !important;
+    padding: 0;
+  }
+  li {
+    color: white !important;
+    padding-top: 15px;
+    padding-right: 7.5px;
+    padding-left: 1.5px;
+
+  }
+
+  .logout {
+    text-decoration: underline !important;
   }
 }
 
