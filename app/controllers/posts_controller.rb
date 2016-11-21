@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:edit, :update, :show, :delete]
-
+  before_action :authenticate_customer_admin!
   # Index action to render all posts
   def index
     @posts = Post.all

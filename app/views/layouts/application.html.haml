@@ -9,9 +9,11 @@
     #navbar.navbar-collapse
       .navbar-header
         %a.navbar-brand{:href => "#"} RM Platform
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          %a{:href => "#"}Log In
+      %ul.nav.navbar-nav.navbar-right.hmenu
+        - if customer_admin_signed_in?
+          %li= link_to('Logout', destroy_customer_admin_session_path, :method => :delete)
+        - else
+          %li= link_to('Login', new_customer_admin_session_path)
     #wrapper
       #sidebar-wrapper
         %ul.sidebar-nav
