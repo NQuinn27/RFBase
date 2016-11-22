@@ -74,6 +74,12 @@ html, body {
   }
 }
 
+#content_body {
+  background-color: white;
+  width: 100%;
+  clear: both;
+}
+
 #ch-title {
   width: 90%;
   float: left;
@@ -227,12 +233,11 @@ body {
 
 #page-content-wrapper {
   box-shadow: inset 7px 7px 6px -7px #767676 !important;
-  min-width: 900px;
+  min-width: 550px;
 }
 
 .container-fluid {
   padding: 0;
-  background: white;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   overflow: hidden;
@@ -271,4 +276,26 @@ table {
 
 .posts_head {
   background: #C0C0C0;
+}
+
+form.simple_form {
+  margin: 20px !important;
+}
+
+.embed_form {
+  width: 500px;
+  border: 1px solid #C0C0C0;
+  border-radius: 5px;
+  margin: 15px auto;
+  background-color: white;
+  box-shadow: 7px 7px 6px -7px #767676 !important;
+  h2 {
+    text-align: center;
+  }
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
 }

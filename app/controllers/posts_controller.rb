@@ -67,8 +67,5 @@ class PostsController < ApplicationController
   def current_customer
     @current_customer = Customer.find(current_customer_admin.customer_id)
   end
-
-  def posts_for_customer
-    @posts_for_customer = Post.all(:conditions => { :customer_id => current_customer_admin.customer_id })
-  end
+  
 end

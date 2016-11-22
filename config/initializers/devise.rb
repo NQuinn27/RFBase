@@ -12,13 +12,27 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'niall@niallquinn.me'
-
-  # Configure the class responsible to send e-mails.
-  # config.mailer = 'Devise::Mailer'
+  config.mailer = 'Devise::Mailer'
 
   # Configure the parent class responsible to send e-mails.
-  # config.parent_mailer = 'ActionMailer::Base'
+  config.parent_mailer = 'ActionMailer::Base'
+  config.mailer_sender = 'mailer.rmplatform@gmail.com'
+  config.mailer.delivery_method = :smtp
+  config.mailer.perform_deliveries = true
+  config.mailer.raise_delivery_errors = false
+  config.mailer.default :charset => "utf-8"
+
+  config.mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: ENV["GMAIL_DOMAIN"],
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
+  }
+
+
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and

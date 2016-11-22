@@ -1,37 +1,22 @@
-!!! 5
-%html
-  %head
-    %title RM Platform
-    = csrf_meta_tags
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-  %body
-    #navbar.navbar-collapse
-      .navbar-header
-        %a.navbar-brand{:href => "#"} RM Platform
-      %ul.nav.navbar-nav.navbar-right.hmenu
-        - if customer_admin_signed_in?
-          %li= "#{current_customer_admin.first_name} #{current_customer_admin.last_name}"
-          %li= link_to('Log Out', destroy_customer_admin_session_path, :method => :delete, :type => 'button', :class => 'logout')
-        - else
-          %li= link_to('Login', new_customer_admin_session_path)
-    #wrapper
-      #sidebar-wrapper
-        %ul.sidebar-nav
-          %li
-            %a#posts_menu_item{:href => posts_path} Posts
-          %li
-            %a#media_menu_item{:href => "#"} Media
-          %li
-            %a#social_menu_item{:href => "#"} Social
-          %li
-            %a#social_menu_item{:href => "#"} Theme
-      #page-content-wrapper
-        .container-fluid
-          = yield
-    :javascript
-      $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-        $("#toggle_button").toggleClass("toggled");
-      });
+= render 'partials/header'
+= render 'partials/nav_bar'
+#wrapper
+  #sidebar-wrapper
+    %ul.sidebar-nav
+      %li
+        %a#posts_menu_item{:href => posts_path} Posts
+      %li
+        %a#media_menu_item{:href => "#"} Media
+      %li
+        %a#social_menu_item{:href => "#"} Social
+      %li
+        %a#social_menu_item{:href => "#"} Theme
+  #page-content-wrapper
+    .container-fluid
+      = yield
+:javascript
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+    $("#toggle_button").toggleClass("toggled");
+  });

@@ -1,6 +1,8 @@
 class CustomerAdmins::RegistrationsController < Devise::RegistrationsController
-# before_action :configure_sign_up_params, only: [:create]
-# before_action :configure_account_update_params, only: [:update]
+before_action :sign_up_params, only: [:create]
+before_action :account_update_params, only: [:update]
+
+layout 'login'
 
   # GET /resource/sign_up
   def new
@@ -10,8 +12,6 @@ class CustomerAdmins::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    puts sign_up_params.inspect
-    sign_up_params
     super
   end
 
@@ -48,8 +48,8 @@ class CustomerAdmins::RegistrationsController < Devise::RegistrationsController
   end
 
   # If you have extra params to permit, append them to the sanitizer.
-  def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:attribute]).push(:customer_id)
+  def account_update_params
+    params.require(:customer_admin).permit(:email, :password, :password_confirmation, :customer_id, :first_name, :last_name)
   end
 
   # The path used after sign up.
