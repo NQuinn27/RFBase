@@ -19,6 +19,14 @@
 $material_color : #22A7F0;
 $material_color_dark : #1B7DC8;
 
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -279,18 +287,73 @@ table {
 }
 
 form.simple_form {
-  margin: 20px !important;
+  // margin: 20px !important;
 }
 
 .embed_form {
-  width: 500px;
-  border: 1px solid #C0C0C0;
+  width: 300px;
+  // border: 1px solid #C0C0C0;
   border-radius: 5px;
   margin: 15px auto;
-  background-color: white;
-  box-shadow: 7px 7px 6px -7px #767676 !important;
   h2 {
     text-align: center;
+  }
+
+  div.form-inputs {
+    width: 100%;
+  }
+
+  div.form-group {
+    margin-bottom:2px;
+    padding: 0;
+  }
+  input.email, input.password {
+    margin: 0;
+    height: 50px;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color:white;
+    text-align: left;
+  }
+  input.email::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #C0C0C0;
+  }
+  input.email-moz-placeholder { /* Firefox 19+ */
+    color: #C0C0C0;
+  }
+  input.email-ms-input-placeholder { /* IE 10+ */
+    color: #C0C0C0;
+  }
+  input.email-moz-placeholder { /* Firefox 18- */
+    color: #C0C0C0;
+  }
+
+  input.loginButton {
+    margin: 0;
+    height: 50px;
+    border-radius: 0;
+    background-color: $material_color_dark;
+    border: none;
+    color:white;
+    text-align: center;
+  }
+
+  .form-actions {
+    a {
+      color: white;
+    }
+  }
+}
+
+
+.loginButton {
+  width: 100%;
+  margin: auto;
+  color: white;
+  background-color: $material_color_dark;
+  input:hover {
+    background-color: $material_color;
   }
 }
 
@@ -298,4 +361,23 @@ form.simple_form {
   content: "";
   display: table;
   clear: both;
+}
+
+#login_page {
+  width: 100%;
+  height: 100%;
+  background-image: image_url('bg-demo');
+  background-size: cover;
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+}
+
+.darken {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
 }
