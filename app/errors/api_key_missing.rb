@@ -1,0 +1,2 @@
+class ApiKeyMissing < ::StandardError
+end

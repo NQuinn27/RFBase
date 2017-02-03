@@ -25,7 +25,7 @@
               %td= raw(HTML_Truncator.truncate(post.body, 10))
               %td= post.created_at.strftime('%b %d, %Y')
               %td= link_to 'Destroy', post_path(post), data: {:confirm => 'Are you sure?'}, :method => :delete
-              %td= link_to 'Edit', post_path(post), :method => :edit
+              %td= link_to 'Edit', edit_post_path(post)
               %td= link_to "More", post_path(post)
 :javascript
   $("#posts_menu_item").toggleClass("active")

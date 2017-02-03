@@ -1,0 +1,2 @@
+class CustomerMissing < ::StandardError
+end
