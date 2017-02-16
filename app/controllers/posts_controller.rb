@@ -69,8 +69,4 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def current_customer
-    @current_customer = Customer.find(current_customer_admin.customer_id)
-  end
-
 end
