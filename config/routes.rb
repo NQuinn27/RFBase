@@ -14,4 +14,10 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :articles
+
+  namespace :api do
+    namespace :v1 do
+      resources :post, only: [:index], controller: "posts"
+    end
+  end
 end

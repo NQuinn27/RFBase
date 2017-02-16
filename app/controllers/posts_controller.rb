@@ -33,7 +33,7 @@ class PostsController < ApplicationController
   def update
     if @post.update_attributes(post_params)
       flash[:notice] = "Successfully updated post!"
-      redirect_to post_path(@posts)
+      redirect_to posts_path
     else
       flash[:alert] = "Error updating post!"
       render :edit
@@ -46,11 +46,16 @@ class PostsController < ApplicationController
 
   # The destroy action removes the post permanently from the database
   def destroy
-    if @post.destroy
-      flash[:notice] = "Successfully deleted post!"
-      redirect_to posts_path
+    @post = Post.find(params[:id])
+    if @post.present?
+      if @post.destroy
+        flash[:notice] = "Successfully deleted post!"
+        redirect_to posts_path
+      else
+        flash[:alert] = "Error deleting post!"
+      end
     else
-      flash[:alert] = "Error updating post!"
+      flash[:alert] = "Error deleting post!"
     end
   end
 
@@ -64,8 +69,4 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def current_customer
-    @current_customer = Customer.find(current_customer_admin.customer_id)
-  end
-  
 end
