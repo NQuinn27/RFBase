@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Media Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @media_items.each do |media_item| %>
+      <tr>
+        <img src=<%= media_item.image %> />
+      </tr>
+      <tr>
+        <td><%= link_to 'Show', media_item %></td>
+        <td><%= link_to 'Edit', edit_media_item_path(media_item) %></td>
+        <td><%= link_to 'Destroy', media_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Media Item', new_media_item_path %>
