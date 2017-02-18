@@ -19247,3 +19247,2510 @@ Processing by MediaItemsController#index as HTML
 Completed 200 OK in 83ms (Views: 73.0ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/media_items" for ::1 at 2017-02-18 10:58:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MediaItemsController#index as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `customer_id' for nil:NilClass):
+  
+app/controllers/application_controller.rb:4:in `current_customer'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.3ms)
+Started GET "/media_items" for ::1 at 2017-02-18 10:59:02 +0000
+Processing by MediaItemsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `customer_id' for nil:NilClass):
+  
+app/controllers/application_controller.rb:4:in `current_customer'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.4ms)
+Started GET "/" for ::1 at 2017-02-18 10:59:07 +0000
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 10:59:07 +0000
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/customer_admins/sign_in" for ::1 at 2017-02-18 10:59:07 +0000
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (1.3ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (493.7ms)
+  Rendered partials/_header.html.haml (88.9ms)
+Completed 200 OK in 625ms (Views: 591.1ms | ActiveRecord: 14.1ms)
+
+
+Started POST "/customer_admins/sign_in" for ::1 at 2017-02-18 10:59:18 +0000
+Processing by CustomerAdmins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mukXXfDqAReX8253yKPRdN3mfNljhgy1LFYMfm/3//l0l9V3oj3B5PcrfGEi9sEXL19AXlSBtXfj/+XysWuv1Q==", "customer_admin"=>{"email"=>"niall+customerOne@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall+customerone@niallquinn.me' ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[33mUPDATE `customer_admins` SET `current_sign_in_at` = '2017-02-18 10:59:19', `last_sign_in_at` = '2017-02-18 09:44:21', `current_sign_in_ip` = '::1', `last_sign_in_ip` = '127.0.0.1', `sign_in_count` = 17, `updated_at` = '2017-02-18 10:59:19' WHERE `customer_admins`.`id` = 11[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 184ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 10:59:19 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (3.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (25.3ms)
+  Rendered partials/_header.html.haml (46.9ms)
+  Rendered partials/_nav_bar.html.haml (3.3ms)
+Completed 200 OK in 129ms (Views: 83.0ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 10:59:48 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (9.3ms)
+  Rendered partials/_header.html.haml (48.8ms)
+  Rendered partials/_nav_bar.html.haml (2.3ms)
+Completed 200 OK in 78ms (Views: 71.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 10:59:49 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (8.5ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (3.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.erb within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 18.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `thumb' for #<MediaItem:0x007fc3b9a120f0>):
+    15:         <img src=<%= media_item.image %> />
+    16:       </tr>
+    17:       <tr>
+    18:         <td><%= link_to 'Show', media_item.thumb.url %></td>
+    19:         <td><%= link_to 'Edit', edit_media_item_path(media_item) %></td>
+    20:         <td><%= link_to 'Destroy', media_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    21:       </tr>
+  
+app/views/media_items/index.html.erb:18:in `block in _app_views_media_items_index_html_erb___1376084429083674917_70239219904980'
+app/views/media_items/index.html.erb:13:in `_app_views_media_items_index_html_erb___1376084429083674917_70239219904980'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.6ms)
+Started GET "/media_items" for ::1 at 2017-02-18 10:59:56 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (2.2ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.erb within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `thumb' for #<MediaItem:0x007fc3b68ea9f0>):
+    15:         <img src=<%= media_item.image %> />
+    16:       </tr>
+    17:       <tr>
+    18:         <td><%= link_to 'Show', media_item.thumb %></td>
+    19:         <td><%= link_to 'Edit', edit_media_item_path(media_item) %></td>
+    20:         <td><%= link_to 'Destroy', media_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    21:       </tr>
+  
+app/views/media_items/index.html.erb:18:in `block in _app_views_media_items_index_html_erb___1376084429083674917_70239310818600'
+app/views/media_items/index.html.erb:13:in `_app_views_media_items_index_html_erb___1376084429083674917_70239310818600'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.1ms)
+Started GET "/media_items" for ::1 at 2017-02-18 11:00:01 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.erb within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.erb within layouts/application (3.7ms)
+  Rendered partials/_header.html.haml (61.5ms)
+  Rendered partials/_nav_bar.html.haml (3.6ms)
+Completed 200 OK in 89ms (Views: 81.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 12:45:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (30.8ms)
+  Rendered partials/_header.html.haml (837.5ms)
+  Rendered partials/_nav_bar.html.haml (4.8ms)
+Completed 200 OK in 963ms (Views: 891.0ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:45:43 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  Rendered media_items/index.html.haml within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 3.8ms)
+
+
+  
+ActionView::Template::Error (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block):
+    15:         %td= link_to 'Show', media_item
+    16:         %td= link_to 'Edit', edit_media_item_path(media_item)
+    17:         %td= link_to 'Destroy', media_item, method: :delete, data: { confirm: 'Are you sure?' }
+    18:     - end
+    19: %br
+    20: 
+    21: = link_to 'New Media Item', new_media_item_path
+  
+app/views/media_items/index.html.haml:18
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.9ms)
+Started GET "/media_items" for ::1 at 2017-02-18 12:45:55 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (10.7ms)
+  Rendered partials/_header.html.haml (50.0ms)
+  Rendered partials/_nav_bar.html.haml (3.1ms)
+Completed 200 OK in 85ms (Views: 78.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:47:18 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.3ms)
+  Rendered partials/_header.html.haml (47.2ms)
+  Rendered partials/_nav_bar.html.haml (4.2ms)
+Completed 200 OK in 76ms (Views: 69.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:48:22 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.0ms)
+  Rendered partials/_header.html.haml (51.4ms)
+  Rendered partials/_nav_bar.html.haml (3.7ms)
+Completed 200 OK in 77ms (Views: 71.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:48:37 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.7ms)
+  Rendered partials/_header.html.haml (51.8ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 76ms (Views: 70.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:49:01 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.1ms)
+  Rendered partials/_header.html.haml (55.0ms)
+  Rendered partials/_nav_bar.html.haml (2.9ms)
+Completed 200 OK in 80ms (Views: 74.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:52:45 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.5ms)
+  Rendered partials/_header.html.haml (1582.6ms)
+  Rendered partials/_nav_bar.html.haml (4.7ms)
+Completed 200 OK in 1617ms (Views: 1607.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:52:53 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.2ms)
+  Rendered partials/_header.html.haml (47.5ms)
+  Rendered partials/_nav_bar.html.haml (2.3ms)
+Completed 200 OK in 73ms (Views: 67.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:54:33 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.0ms)
+  Rendered partials/_header.html.haml (1608.8ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 1636ms (Views: 1629.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:54:36 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.3ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (6.3ms)
+  Rendered partials/_header.html.haml (66.9ms)
+  Rendered partials/_nav_bar.html.haml (4.8ms)
+Completed 200 OK in 103ms (Views: 95.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:56:13 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.5ms)
+  Rendered partials/_header.html.haml (1454.0ms)
+  Rendered partials/_nav_bar.html.haml (2.0ms)
+Completed 200 OK in 1485ms (Views: 1475.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:56:52 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.1ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.8ms)
+  Rendered partials/_header.html.haml (1511.1ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 1539ms (Views: 1531.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:57:17 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.0ms)
+  Rendered partials/_header.html.haml (1453.8ms)
+  Rendered partials/_nav_bar.html.haml (2.1ms)
+Completed 200 OK in 1478ms (Views: 1472.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:57:30 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.1ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.1ms)
+  Rendered partials/_header.html.haml (1343.5ms)
+  Rendered partials/_nav_bar.html.haml (3.5ms)
+Completed 200 OK in 1371ms (Views: 1364.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 12:58:49 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  Rendered media_items/index.html.haml within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/Users/niall/Developer/NCI/Software Project/rm-platform/Platform/app/views/media_items/index.html.haml:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...cell"}, nil, :href => link_to 'Show', media_item)}>\n      <...
+...                               ^
+/Users/niall/Developer/NCI/Software Project/rm-platform/Platform/app/views/media_items/index.html.haml:9: syntax error, unexpected ',', expecting tSTRING_DEND
+..., nil, :href => link_to 'Show', media_item)}>\n      <img#{_...
+...                               ^
+/Users/niall/Developer/NCI/Software Project/rm-platform/Platform/app/views/media_items/index.html.haml:10: syntax error, unexpected tSTRING_DEND, expecting '}'
+...ibutes({"class"=>"media_image"}, nil, :src => media_item.ima...
+...                               ^
+/Users/niall/Developer/NCI/Software Project/rm-platform/Platform/app/views/media_items/index.html.haml:10: Can't assign to nil
+...({"class"=>"media_image"}, nil, :src => media_item.image )}>...
+...                               ^
+/Users/niall/Developer/NCI/Software Project/rm-platform/Platform/app/views/media_items/index.html.haml:10: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+..."=>"media_image"}, nil, :src => media_item.image )}>\n    </...
+...                               ^
+/Users/niall/Developer/NCI/Software Project/rm-platform/Platform/app/views/media_items/index.html.haml:10: syntax error, unexpected ')', expecting tSTRING_DEND
+...nil, :src => media_item.image )}>\n    </a>\n", -1, false);e...
+...                               ^
+/Users/niall/Developer/NCI/Software Project/rm-platform/Platform/app/views/media_items/index.html.haml:10: unknown regexp options - dv
+unmatched close parenthesis: /a>\n", -1, false);end;_hamlout.push_text("  </i
+/Users/niall/Developer/NCI/Software Project/rm-platform/Platform/app/views/media_items/index.html.haml:10: syntax error, unexpected $undefined
+...d;_hamlout.push_text("  </div>\n</div>\n<br>\n#{_hamlout.adj...
+...                               ^
+/Users/niall/Developer/NCI/Software Project/rm-platform/Platform/app/views/media_items/index.html.haml:10: unterminated regexp meets end of file
+/Users/niall/Developer/NCI/Software Project/rm-platform/Platform/app/views/media_items/index.html.haml:10: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  
+app/views/media_items/index.html.haml:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/media_items/index.html.haml:9: syntax error, unexpected ',', expecting tSTRING_DEND
+app/views/media_items/index.html.haml:10: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/views/media_items/index.html.haml:10: Can't assign to nil
+app/views/media_items/index.html.haml:10: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+app/views/media_items/index.html.haml:10: syntax error, unexpected ')', expecting tSTRING_DEND
+app/views/media_items/index.html.haml:10: unknown regexp options - dv
+app/views/media_items/index.html.haml:10: syntax error, unexpected $undefined
+app/views/media_items/index.html.haml:10: unterminated regexp meets end of file
+app/views/media_items/index.html.haml:10: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.8ms)
+Started GET "/media_items" for ::1 at 2017-02-18 12:59:19 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  Rendered media_items/index.html.haml within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %div and nested within it.):
+     7:   .media_grid
+     8:     - @media_items.each do |media_item|
+     9:       .media_cell= link_to 'Show', media_item
+    10:         %img.media_image{:src => media_item.image }
+    11: 
+    12: -# %table
+    13: -#   %thead
+  
+app/views/media_items/index.html.haml:10
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.6ms)
+Started GET "/media_items" for ::1 at 2017-02-18 12:59:33 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (3.9ms)
+  Rendered partials/_header.html.haml (43.5ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 67ms (Views: 60.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:01:33 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.4ms)
+  Rendered partials/_header.html.haml (49.2ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 74ms (Views: 68.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:02:33 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.0ms)
+  Rendered partials/_header.html.haml (1650.6ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 1676ms (Views: 1669.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:03:07 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.1ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.2ms)
+  Rendered partials/_header.html.haml (1364.0ms)
+  Rendered partials/_nav_bar.html.haml (2.3ms)
+Completed 200 OK in 1389ms (Views: 1383.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:03:59 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.9ms)
+  Rendered partials/_header.html.haml (1508.8ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 1535ms (Views: 1529.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:04:37 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.5ms)
+  Rendered partials/_header.html.haml (1490.3ms)
+  Rendered partials/_nav_bar.html.haml (2.1ms)
+Completed 200 OK in 1514ms (Views: 1508.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:04:48 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.7ms)
+  Rendered partials/_header.html.haml (1402.4ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 1427ms (Views: 1421.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:05:01 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.9ms)
+  Rendered partials/_header.html.haml (1475.8ms)
+  Rendered partials/_nav_bar.html.haml (2.0ms)
+Completed 200 OK in 1501ms (Views: 1494.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:05:15 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.6ms)
+  Rendered partials/_header.html.haml (1366.4ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 1394ms (Views: 1388.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:05:41 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.1ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.7ms)
+  Rendered partials/_header.html.haml (1515.1ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 1540ms (Views: 1534.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:05:48 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.2ms)
+  Rendered partials/_header.html.haml (1391.7ms)
+  Rendered partials/_nav_bar.html.haml (3.0ms)
+Completed 200 OK in 1418ms (Views: 1412.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:06:06 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.9ms)
+  Rendered partials/_header.html.haml (1480.1ms)
+  Rendered partials/_nav_bar.html.haml (3.1ms)
+Completed 200 OK in 1508ms (Views: 1500.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:06:19 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.5ms)
+  Rendered partials/_header.html.haml (1423.4ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 1450ms (Views: 1443.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:06:30 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.8ms)
+  Rendered partials/_header.html.haml (1544.1ms)
+  Rendered partials/_nav_bar.html.haml (2.0ms)
+Completed 200 OK in 1569ms (Views: 1562.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:06:44 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.9ms)
+Started GET "/media_items" for ::1 at 2017-02-18 13:06:44 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (67.3ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (25.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (29.7ms)
+  Rendered partials/_header.html.haml (2691.2ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 2723ms (Views: 2716.8ms | ActiveRecord: 2.4ms)
+
+
+  Rendered partials/_header.html.haml (2436.3ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 2576ms (Views: 2458.1ms | ActiveRecord: 93.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:06:47 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.4ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (6.2ms)
+  Rendered partials/_header.html.haml (53.3ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 86ms (Views: 77.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:06:57 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.9ms)
+  Rendered partials/_header.html.haml (1441.5ms)
+  Rendered partials/_nav_bar.html.haml (4.6ms)
+Completed 200 OK in 1469ms (Views: 1463.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:07:02 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.2ms)
+  Rendered partials/_header.html.haml (1470.2ms)
+  Rendered partials/_nav_bar.html.haml (3.5ms)
+Completed 200 OK in 1498ms (Views: 1491.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:07:44 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (6.0ms)
+  Rendered partials/_header.html.haml (1465.1ms)
+  Rendered partials/_nav_bar.html.haml (3.0ms)
+Completed 200 OK in 1494ms (Views: 1488.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:08:40 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.3ms)
+  Rendered partials/_header.html.haml (50.2ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 76ms (Views: 69.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items/1" for ::1 at 2017-02-18 13:08:51 +0000
+Processing by MediaItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMediaItem Load (0.7ms)[0m  [1m[34mSELECT  `media_items`.* FROM `media_items` WHERE `media_items`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/show.html.erb within layouts/application
+  Rendered media_items/show.html.erb within layouts/application (1.0ms)
+  Rendered partials/_header.html.haml (50.1ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 79ms (Views: 70.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:09:41 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.1ms)
+  Rendered partials/_header.html.haml (1449.4ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 1477ms (Views: 1469.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:10:24 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.1ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.9ms)
+  Rendered partials/_header.html.haml (1459.6ms)
+  Rendered partials/_nav_bar.html.haml (3.0ms)
+Completed 200 OK in 1487ms (Views: 1480.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:11:06 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.8ms)
+  Rendered partials/_header.html.haml (1456.8ms)
+  Rendered partials/_nav_bar.html.haml (3.1ms)
+Completed 200 OK in 1482ms (Views: 1476.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:11:24 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.3ms)
+  Rendered partials/_header.html.haml (1453.2ms)
+  Rendered partials/_nav_bar.html.haml (2.3ms)
+Completed 200 OK in 1478ms (Views: 1472.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:11:27 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.5ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (8.0ms)
+  Rendered partials/_header.html.haml (68.0ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 97ms (Views: 90.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:12:03 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.8ms)
+  Rendered partials/_header.html.haml (1468.9ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 1493ms (Views: 1487.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:12:18 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.2ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (7.0ms)
+  Rendered partials/_header.html.haml (1522.8ms)
+  Rendered partials/_nav_bar.html.haml (4.8ms)
+Completed 200 OK in 1553ms (Views: 1547.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:12:40 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.0ms)
+  Rendered partials/_header.html.haml (54.4ms)
+  Rendered partials/_nav_bar.html.haml (3.0ms)
+Completed 200 OK in 81ms (Views: 75.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:12:51 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.3ms)
+  Rendered partials/_header.html.haml (1492.9ms)
+  Rendered partials/_nav_bar.html.haml (2.7ms)
+Completed 200 OK in 1520ms (Views: 1513.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:12:58 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.8ms)
+  Rendered partials/_header.html.haml (1519.6ms)
+  Rendered partials/_nav_bar.html.haml (2.3ms)
+Completed 200 OK in 1544ms (Views: 1539.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:13:19 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.2ms)
+  Rendered partials/_header.html.haml (1526.2ms)
+  Rendered partials/_nav_bar.html.haml (3.2ms)
+Completed 200 OK in 1552ms (Views: 1546.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items/new" for ::1 at 2017-02-18 13:13:30 +0000
+Processing by MediaItemsController#new as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/new.html.erb within layouts/application
+  Rendered media_items/_form.html.erb (29.1ms)
+  Rendered media_items/new.html.erb within layouts/application (33.1ms)
+  Rendered partials/_header.html.haml (48.5ms)
+  Rendered partials/_nav_bar.html.haml (3.6ms)
+Completed 200 OK in 108ms (Views: 102.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/media_items" for ::1 at 2017-02-18 13:13:42 +0000
+Processing by MediaItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aDBx6pm888nHtnpebnnyRcCC1OxXwvBTTDUx3MKozKvzsbyiV/inTE5mRbx9+DY4PNJp/a1Es7v9vOd03zAI6Q==", "media_item"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f9924deb038 @tempfile=#<Tempfile:/var/folders/ty/7wqs8qzd1qn1fl93t22lhl940000gn/T/RackMultipart20170218-85689-pgpvtk.png>, @original_filename="coffee.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"media_item[image]\"; filename=\"coffee.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"Popdeem2"}, "commit"=>"Create Media item"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `resize_to_fit' for #<MediaItemImageUploader::Uploader70147825006860:0x007f9923881300>):
+  
+app/controllers/media_items_controller.rb:29:in `create'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.0ms)
+Started POST "/media_items" for ::1 at 2017-02-18 13:14:32 +0000
+Processing by MediaItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aDBx6pm888nHtnpebnnyRcCC1OxXwvBTTDUx3MKozKvzsbyiV/inTE5mRbx9+DY4PNJp/a1Es7v9vOd03zAI6Q==", "media_item"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f9923a34490 @tempfile=#<Tempfile:/var/folders/ty/7wqs8qzd1qn1fl93t22lhl940000gn/T/RackMultipart20170218-85689-v9r1g3.png>, @original_filename="coffee.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"media_item[image]\"; filename=\"coffee.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"Popdeem2"}, "commit"=>"Create Media item"}
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 8.8ms)
+
+
+  
+LoadError (cannot load such file -- mini_magick (You may need to install the mini_magick gem)):
+  
+app/uploaders/media_item_image_uploader.rb:5:in `include'
+app/uploaders/media_item_image_uploader.rb:5:in `<class:MediaItemImageUploader>'
+app/uploaders/media_item_image_uploader.rb:1:in `<top (required)>'
+app/models/media_item.rb:4:in `<class:MediaItem>'
+app/models/media_item.rb:2:in `<top (required)>'
+app/controllers/media_items_controller.rb:29:in `create'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.6ms)
+Started GET "/media_items/new" for ::1 at 2017-02-18 13:15:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MediaItemsController#new as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/new.html.erb within layouts/application
+  Rendered media_items/_form.html.erb (26.8ms)
+  Rendered media_items/new.html.erb within layouts/application (30.8ms)
+  Rendered partials/_header.html.haml (654.7ms)
+  Rendered partials/_nav_bar.html.haml (2.7ms)
+Completed 200 OK in 781ms (Views: 705.4ms | ActiveRecord: 16.7ms)
+
+
+Started POST "/media_items" for ::1 at 2017-02-18 13:15:37 +0000
+Processing by MediaItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j56OyWtEHnqnh9UDbwzhe5zwYNUgA8dg5tqH8hIMGk4YKXbKoBOuRWo5qLjx7kGwDhNjXGm+FZ0HtNadpu28tA==", "media_item"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb2523acdf0 @tempfile=#<Tempfile:/var/folders/ty/7wqs8qzd1qn1fl93t22lhl940000gn/T/RackMultipart20170218-90146-18kdq20.png>, @original_filename="Desktop.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"media_item[image]\"; filename=\"Desktop.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"Popdeem2"}, "commit"=>"Create Media item"}
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  Rendering media_items/new.html.erb within layouts/application
+  Rendered media_items/_form.html.erb (1.5ms)
+  Rendered media_items/new.html.erb within layouts/application (3.5ms)
+  Rendered partials/_header.html.haml (50.1ms)
+  Rendered partials/_nav_bar.html.haml (3.0ms)
+Completed 200 OK in 96ms (Views: 69.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:15:56 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.2ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.3ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (6.8ms)
+  Rendered partials/_header.html.haml (54.3ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 100ms (Views: 76.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/media_items/new" for ::1 at 2017-02-18 13:15:57 +0000
+Processing by MediaItemsController#new as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/new.html.erb within layouts/application
+  Rendered media_items/_form.html.erb (1.6ms)
+  Rendered media_items/new.html.erb within layouts/application (5.1ms)
+  Rendered partials/_header.html.haml (48.2ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 82ms (Views: 74.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/media_items" for ::1 at 2017-02-18 13:16:03 +0000
+Processing by MediaItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jbvEo1Ox/xatx754srZ0TMLW7xaEFgFBggLwWiVKqUcWOgnrnfWrkyQXgZqhN7AxPoZSB36QQqkziybyONJtBQ==", "media_item"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb255ba5bd0 @tempfile=#<Tempfile:/var/folders/ty/7wqs8qzd1qn1fl93t22lhl940000gn/T/RackMultipart20170218-90146-k75pfj.png>, @original_filename="coffee.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"media_item[image]\"; filename=\"coffee.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"coffee2"}, "commit"=>"Create Media item"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering media_items/new.html.erb within layouts/application
+  Rendered media_items/_form.html.erb (1.5ms)
+  Rendered media_items/new.html.erb within layouts/application (3.4ms)
+  Rendered partials/_header.html.haml (44.1ms)
+  Rendered partials/_nav_bar.html.haml (2.1ms)
+Completed 200 OK in 79ms (Views: 61.5ms | ActiveRecord: 10.2ms)
+
+
+Started POST "/media_items" for ::1 at 2017-02-18 13:17:21 +0000
+Processing by MediaItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nL+uJimTocxGkVydVD1xCiwHWH3G65y/lU5vUca/9cYLCFYl4sQR84svISbK39HBvuRb9I9WTkJ0ID4+cl5TPA==", "media_item"=>{"caption"=>"coffee2"}, "commit"=>"Create Media item"}
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `media_items` (`customer_id`, `created_at`, `updated_at`, `caption`) VALUES (1, '2017-02-18 13:17:21', '2017-02-18 13:17:21', 'coffee2')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/media_items/4
+Completed 302 Found in 45ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/media_items/4" for ::1 at 2017-02-18 13:17:21 +0000
+Processing by MediaItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMediaItem Load (1.7ms)[0m  [1m[34mSELECT  `media_items`.* FROM `media_items` WHERE `media_items`.`id` = 4 LIMIT 1[0m
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/show.html.erb within layouts/application
+  Rendered media_items/show.html.erb within layouts/application (0.6ms)
+  Rendered partials/_header.html.haml (56.3ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 79ms (Views: 72.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:17:24 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.5ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (7.4ms)
+  Rendered partials/_header.html.haml (53.3ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 86ms (Views: 78.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:17:29 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.7ms)
+  Rendered partials/_header.html.haml (54.4ms)
+  Rendered partials/_nav_bar.html.haml (3.6ms)
+Completed 200 OK in 80ms (Views: 74.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:17:46 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.9ms)
+  Rendered partials/_header.html.haml (60.6ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 88ms (Views: 81.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:18:15 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.6ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (11.9ms)
+  Rendered partials/_header.html.haml (50.9ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 115ms (Views: 78.1ms | ActiveRecord: 8.3ms)
+
+
+Started DELETE "/media_items/4" for ::1 at 2017-02-18 13:18:18 +0000
+Processing by MediaItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"k+ND0Aftz170bb4JrAe3kHAeQalgXi+ZFrICZh1XTNsEVLvTzLp/YTnTw7Iy5Rdb4v1CICnj/WT33FMJqbbqIQ==", "id"=>"4"}
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT  `media_items`.* FROM `media_items` WHERE `media_items`.`id` = 4 LIMIT 1[0m
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM `media_items` WHERE `media_items`.`id` = 4[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/media_items
+Completed 302 Found in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:18:18 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.9ms)
+  Rendered partials/_header.html.haml (56.8ms)
+  Rendered partials/_nav_bar.html.haml (3.6ms)
+Completed 200 OK in 85ms (Views: 77.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/media_items/new" for ::1 at 2017-02-18 13:18:21 +0000
+Processing by MediaItemsController#new as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/new.html.erb within layouts/application
+  Rendered media_items/_form.html.erb (3.9ms)
+  Rendered media_items/new.html.erb within layouts/application (7.1ms)
+  Rendered partials/_header.html.haml (57.1ms)
+  Rendered partials/_nav_bar.html.haml (3.1ms)
+Completed 200 OK in 92ms (Views: 86.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/media_items" for ::1 at 2017-02-18 13:18:25 +0000
+Processing by MediaItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iDuEd+ZhWNEF/pXSRG/ybOi9ay4Uq2H0PmOzaZtuF5YTukk/KCUMVIwuqjBX7jYRFO3WP+4tIhyP6mXBhvbT1A==", "media_item"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb253f268b0 @tempfile=#<Tempfile:/var/folders/ty/7wqs8qzd1qn1fl93t22lhl940000gn/T/RackMultipart20170218-90146-1vwzvdy.png>, @original_filename="coffee.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"media_item[image]\"; filename=\"coffee.png\"\r\nContent-Type: image/png\r\n">, "caption"=>""}, "commit"=>"Create Media item"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `media_items` (`customer_id`, `created_at`, `updated_at`, `image`, `caption`) VALUES (1, '2017-02-18 13:18:25', '2017-02-18 13:18:25', 'coffee.png', '')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/media_items/5
+Completed 302 Found in 11ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/media_items/5" for ::1 at 2017-02-18 13:18:25 +0000
+Processing by MediaItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMediaItem Load (0.6ms)[0m  [1m[34mSELECT  `media_items`.* FROM `media_items` WHERE `media_items`.`id` = 5 LIMIT 1[0m
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/show.html.erb within layouts/application
+  Rendered media_items/show.html.erb within layouts/application (0.7ms)
+  Rendered partials/_header.html.haml (49.6ms)
+  Rendered partials/_nav_bar.html.haml (2.9ms)
+Completed 200 OK in 71ms (Views: 65.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:18:26 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (8.7ms)
+  Rendered partials/_header.html.haml (51.1ms)
+  Rendered partials/_nav_bar.html.haml (2.7ms)
+Completed 200 OK in 86ms (Views: 77.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:18:48 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.4ms)
+  Rendered partials/_header.html.haml (1480.6ms)
+  Rendered partials/_nav_bar.html.haml (2.0ms)
+Completed 200 OK in 1506ms (Views: 1500.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:19:08 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.6ms)
+  Rendered partials/_header.html.haml (1538.3ms)
+  Rendered partials/_nav_bar.html.haml (2.1ms)
+Completed 200 OK in 1562ms (Views: 1556.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:19:19 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.5ms)
+  Rendered partials/_header.html.haml (1605.6ms)
+  Rendered partials/_nav_bar.html.haml (2.0ms)
+Completed 200 OK in 1630ms (Views: 1624.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:19:28 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.9ms)
+  Rendered partials/_header.html.haml (1500.9ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 1527ms (Views: 1521.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:19:51 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.0ms)
+  Rendered partials/_header.html.haml (1506.9ms)
+  Rendered partials/_nav_bar.html.haml (2.0ms)
+Completed 200 OK in 1530ms (Views: 1524.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:19:55 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.1ms)
+  Rendered partials/_header.html.haml (1475.0ms)
+  Rendered partials/_nav_bar.html.haml (2.3ms)
+Completed 200 OK in 1499ms (Views: 1493.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:20:19 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.2ms)
+  Rendered partials/_header.html.haml (1491.6ms)
+  Rendered partials/_nav_bar.html.haml (2.1ms)
+Completed 200 OK in 1517ms (Views: 1510.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:20:25 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.2ms)
+  Rendered partials/_header.html.haml (1504.9ms)
+  Rendered partials/_nav_bar.html.haml (3.4ms)
+Completed 200 OK in 1533ms (Views: 1526.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:20:52 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.5ms)
+  Rendered partials/_header.html.haml (1571.7ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 1597ms (Views: 1591.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:21:31 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.3ms)
+  Rendered partials/_header.html.haml (1466.7ms)
+  Rendered partials/_nav_bar.html.haml (3.5ms)
+Completed 200 OK in 1494ms (Views: 1488.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:21:48 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.4ms)
+  Rendered partials/_header.html.haml (1506.7ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 1532ms (Views: 1526.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:22:07 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (2.3ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.0ms)
+  Rendered partials/_header.html.haml (1484.2ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 1511ms (Views: 1503.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:22:15 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.1ms)
+  Rendered partials/_header.html.haml (1455.6ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 1480ms (Views: 1474.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:22:30 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.1ms)
+  Rendered partials/_header.html.haml (1489.5ms)
+  Rendered partials/_nav_bar.html.haml (3.0ms)
+Completed 200 OK in 1516ms (Views: 1510.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:23:07 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.2ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.8ms)
+  Rendered partials/_header.html.haml (1467.6ms)
+  Rendered partials/_nav_bar.html.haml (3.1ms)
+Completed 200 OK in 1494ms (Views: 1488.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:23:18 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.4ms)
+  Rendered partials/_header.html.haml (67.7ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "... 100% important": expected ";", was "!;"):
+    4:     %title RM Platform
+    5:     = csrf_meta_tags
+    6:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    7:     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    8:   %body
+  
+app/assets/stylesheets/application.scss:444
+app/views/partials/_header.html.haml:7:in `_app_views_partials__header_html_haml__4101750477519463817_70201959124160'
+app/views/layouts/application.html.haml:1:in `_app_views_layouts_application_html_haml__537886242395567038_70201968574840'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.8ms)
+Started GET "/media_items" for ::1 at 2017-02-18 13:23:26 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.2ms)
+  Rendered partials/_header.html.haml (56.6ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  display: block": expected "{", was ";"):
+    4:     %title RM Platform
+    5:     = csrf_meta_tags
+    6:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    7:     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    8:   %body
+  
+app/assets/stylesheets/application.scss:445
+app/views/partials/_header.html.haml:7:in `_app_views_partials__header_html_haml__4101750477519463817_70201968287160'
+app/views/layouts/application.html.haml:1:in `_app_views_layouts_application_html_haml__537886242395567038_70201969592480'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.1ms)
+Started GET "/media_items" for ::1 at 2017-02-18 13:23:37 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (6.1ms)
+  Rendered partials/_header.html.haml (1512.4ms)
+  Rendered partials/_nav_bar.html.haml (1.9ms)
+Completed 200 OK in 1537ms (Views: 1531.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:23:51 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (7.5ms)
+  Rendered partials/_header.html.haml (1562.9ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 1593ms (Views: 1586.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:23:57 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.9ms)
+  Rendered partials/_header.html.haml (1443.0ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 1469ms (Views: 1463.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:24:15 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (4.9ms)
+  Rendered partials/_header.html.haml (1480.0ms)
+  Rendered partials/_nav_bar.html.haml (2.3ms)
+Completed 200 OK in 1504ms (Views: 1498.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:24:22 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.1ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.8ms)
+  Rendered partials/_header.html.haml (1439.3ms)
+  Rendered partials/_nav_bar.html.haml (2.3ms)
+Completed 200 OK in 1465ms (Views: 1459.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:24:37 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.5ms)
+  Rendered partials/_header.html.haml (1483.0ms)
+  Rendered partials/_nav_bar.html.haml (2.3ms)
+Completed 200 OK in 1508ms (Views: 1502.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:24:47 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (6.2ms)
+  Rendered partials/_header.html.haml (1773.1ms)
+  Rendered partials/_nav_bar.html.haml (4.2ms)
+Completed 200 OK in 1803ms (Views: 1796.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:25:16 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.1ms)
+  Rendered partials/_header.html.haml (1488.1ms)
+  Rendered partials/_nav_bar.html.haml (2.7ms)
+Completed 200 OK in 1515ms (Views: 1507.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:26:23 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.3ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.1ms)
+  Rendered partials/_header.html.haml (1496.2ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 1523ms (Views: 1515.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:26:26 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (6.2ms)
+  Rendered partials/_header.html.haml (54.1ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 81ms (Views: 74.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:26:48 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.3ms)
+  Rendered partials/_header.html.haml (1512.4ms)
+  Rendered partials/_nav_bar.html.haml (4.3ms)
+Completed 200 OK in 1541ms (Views: 1534.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:27:08 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.2ms)
+  Rendered partials/_header.html.haml (1516.8ms)
+  Rendered partials/_nav_bar.html.haml (3.3ms)
+Completed 200 OK in 1544ms (Views: 1537.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items/new" for ::1 at 2017-02-18 13:28:08 +0000
+Processing by MediaItemsController#new as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/new.html.erb within layouts/application
+  Rendered media_items/_form.html.erb (3.2ms)
+  Rendered media_items/new.html.erb within layouts/application (5.1ms)
+  Rendered partials/_header.html.haml (53.0ms)
+  Rendered partials/_nav_bar.html.haml (3.9ms)
+Completed 200 OK in 109ms (Views: 75.6ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/media_items" for ::1 at 2017-02-18 13:28:13 +0000
+Processing by MediaItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qkTZKDcx+ddfRbBwOzrzT7qcjJDbPEIuPHLl9tAWazIxxRRg+XWtUtaVj5IouzcyRswxgSG6AcaN+zNezY6vcA==", "media_item"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb250fb8538 @tempfile=#<Tempfile:/var/folders/ty/7wqs8qzd1qn1fl93t22lhl940000gn/T/RackMultipart20170218-90146-b0vrie.png>, @original_filename="coffee.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"media_item[image]\"; filename=\"coffee.png\"\r\nContent-Type: image/png\r\n">, "caption"=>""}, "commit"=>"Create Media item"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `media_items` (`customer_id`, `created_at`, `updated_at`, `image`, `caption`) VALUES (1, '2017-02-18 13:28:13', '2017-02-18 13:28:13', 'coffee.png', '')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/media_items/6
+Completed 302 Found in 13ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/media_items/6" for ::1 at 2017-02-18 13:28:13 +0000
+Processing by MediaItemsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMediaItem Load (0.7ms)[0m  [1m[34mSELECT  `media_items`.* FROM `media_items` WHERE `media_items`.`id` = 6 LIMIT 1[0m
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/show.html.erb within layouts/application
+  Rendered media_items/show.html.erb within layouts/application (0.7ms)
+  Rendered partials/_header.html.haml (59.2ms)
+  Rendered partials/_nav_bar.html.haml (3.5ms)
+Completed 200 OK in 83ms (Views: 76.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:28:16 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.1ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (8.8ms)
+  Rendered partials/_header.html.haml (45.9ms)
+  Rendered partials/_nav_bar.html.haml (4.3ms)
+Completed 200 OK in 83ms (Views: 75.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:28:56 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (6.0ms)
+  Rendered partials/_header.html.haml (1453.5ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 1479ms (Views: 1473.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:29:13 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.5ms)
+  Rendered partials/_header.html.haml (1470.3ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 1496ms (Views: 1490.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:29:24 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.3ms)
+  Rendered partials/_header.html.haml (1439.5ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 1466ms (Views: 1459.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items/new" for ::1 at 2017-02-18 13:29:28 +0000
+Processing by MediaItemsController#new as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/new.html.erb within layouts/application
+  Rendered media_items/_form.html.erb (2.3ms)
+  Rendered media_items/new.html.erb within layouts/application (4.3ms)
+  Rendered partials/_header.html.haml (51.6ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 82ms (Views: 77.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/media_items" for ::1 at 2017-02-18 13:29:33 +0000
+Processing by MediaItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4HmLARSWLy9v7KI0SdibIfyIpTFGrAu+iwigjDes31R7+EZJ2tJ7quY8ndZaWV9cANgYILwqSFY6gXYkKjQbFg==", "media_item"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb253aa9968 @tempfile=#<Tempfile:/var/folders/ty/7wqs8qzd1qn1fl93t22lhl940000gn/T/RackMultipart20170218-90146-1kam7yz.png>, @original_filename="Desktop.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"media_item[image]\"; filename=\"Desktop.png\"\r\nContent-Type: image/png\r\n">, "caption"=>""}, "commit"=>"Create Media item"}
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `media_items` (`customer_id`, `created_at`, `updated_at`, `image`, `caption`) VALUES (1, '2017-02-18 13:29:33', '2017-02-18 13:29:33', 'Desktop.png', '')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/media_items/7
+Completed 302 Found in 12ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/media_items/7" for ::1 at 2017-02-18 13:29:33 +0000
+Processing by MediaItemsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMediaItem Load (0.7ms)[0m  [1m[34mSELECT  `media_items`.* FROM `media_items` WHERE `media_items`.`id` = 7 LIMIT 1[0m
+  [1m[36mCustomerAdmin Load (0.6ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/show.html.erb within layouts/application
+  Rendered media_items/show.html.erb within layouts/application (1.3ms)
+  Rendered partials/_header.html.haml (51.8ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 84ms (Views: 79.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:29:34 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (9.5ms)
+  Rendered partials/_header.html.haml (51.8ms)
+  Rendered partials/_nav_bar.html.haml (2.1ms)
+Completed 200 OK in 85ms (Views: 79.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:29:48 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.7ms)
+  Rendered partials/_header.html.haml (1463.0ms)
+  Rendered partials/_nav_bar.html.haml (4.5ms)
+Completed 200 OK in 1492ms (Views: 1485.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:30:00 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.8ms)
+  Rendered partials/_header.html.haml (1589.2ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 1615ms (Views: 1609.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:30:21 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.5ms)
+  Rendered partials/_header.html.haml (1467.3ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 1492ms (Views: 1486.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:30:35 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.5ms)
+  Rendered partials/_header.html.haml (1424.6ms)
+  Rendered partials/_nav_bar.html.haml (2.1ms)
+Completed 200 OK in 1449ms (Views: 1443.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:30:51 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.4ms)
+  Rendered partials/_header.html.haml (1456.9ms)
+  Rendered partials/_nav_bar.html.haml (4.6ms)
+Completed 200 OK in 1486ms (Views: 1480.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:31:00 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (6.3ms)
+  Rendered partials/_header.html.haml (1424.1ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 1450ms (Views: 1444.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:31:15 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.8ms)
+  Rendered partials/_header.html.haml (1435.3ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 1463ms (Views: 1456.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:31:44 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.6ms)
+  Rendered partials/_header.html.haml (1524.6ms)
+  Rendered partials/_nav_bar.html.haml (2.3ms)
+Completed 200 OK in 1552ms (Views: 1546.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:32:09 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (20.8ms)
+  Rendered partials/_header.html.haml (44.8ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 99ms (Views: 82.4ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:32:10 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.3ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.5ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (10.6ms)
+  Rendered partials/_header.html.haml (73.8ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 114ms (Views: 102.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:32:11 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (12.8ms)
+  Rendered partials/_header.html.haml (65.6ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 110ms (Views: 98.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:32:12 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.6ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (8.1ms)
+  Rendered partials/_header.html.haml (68.8ms)
+  Rendered partials/_nav_bar.html.haml (2.7ms)
+Completed 200 OK in 108ms (Views: 98.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:32:31 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.5ms)
+  Rendered partials/_header.html.haml (38.0ms)
+  Rendered partials/_nav_bar.html.haml (2.1ms)
+Completed 200 OK in 62ms (Views: 56.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:32:53 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (6.2ms)
+  Rendered partials/_header.html.haml (43.7ms)
+  Rendered partials/_nav_bar.html.haml (2.0ms)
+Completed 200 OK in 71ms (Views: 64.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:32:56 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (5.2ms)
+  Rendered partials/_header.html.haml (46.3ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 72ms (Views: 66.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:33:01 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (7.2ms)
+  Rendered partials/_header.html.haml (67.2ms)
+  Rendered partials/_nav_bar.html.haml (3.0ms)
+Completed 200 OK in 96ms (Views: 89.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:33:25 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (6.2ms)
+  Rendered partials/_header.html.haml (57.1ms)
+  Rendered partials/_nav_bar.html.haml (3.0ms)
+Completed 200 OK in 84ms (Views: 78.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:33:36 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (7.0ms)
+  Rendered partials/_header.html.haml (50.4ms)
+  Rendered partials/_nav_bar.html.haml (3.2ms)
+Completed 200 OK in 80ms (Views: 73.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:33:45 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (12.1ms)
+  Rendered partials/_header.html.haml (50.4ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 86ms (Views: 79.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:34:17 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (9.2ms)
+Started GET "/media_items" for ::1 at 2017-02-18 13:34:19 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (25.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (5.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (3.3ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (15.9ms)
+  Rendered partials/_header.html.haml (1887.8ms)
+  Rendered partials/_nav_bar.html.haml (4.0ms)
+Completed 200 OK in 1929ms (Views: 1923.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:34:20 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (26.2ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (19.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (14.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (23.4ms)
+  Rendered partials/_header.html.haml (121.7ms)
+  Rendered partials/_nav_bar.html.haml (4.9ms)
+Completed 200 OK in 229ms (Views: 162.6ms | ActiveRecord: 59.6ms)
+
+
+  Rendered partials/_header.html.haml (1980.6ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 2060ms (Views: 2020.4ms | ActiveRecord: 34.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:34:21 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.6ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (10.1ms)
+  Rendered partials/_header.html.haml (72.9ms)
+  Rendered partials/_nav_bar.html.haml (3.2ms)
+Completed 200 OK in 114ms (Views: 105.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:34:23 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.4ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (8.3ms)
+  Rendered partials/_header.html.haml (53.0ms)
+  Rendered partials/_nav_bar.html.haml (3.2ms)
+Completed 200 OK in 87ms (Views: 80.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:34:32 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (7.4ms)
+  Rendered partials/_header.html.haml (1486.9ms)
+  Rendered partials/_nav_bar.html.haml (2.7ms)
+Completed 200 OK in 1515ms (Views: 1508.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:35:07 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (6.9ms)
+  Rendered partials/_header.html.haml (1567.0ms)
+  Rendered partials/_nav_bar.html.haml (3.5ms)
+Completed 200 OK in 1598ms (Views: 1591.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:35:18 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (11.5ms)
+  Rendered partials/_header.html.haml (52.2ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 88ms (Views: 81.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:36:11 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.1ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (8.7ms)
+  Rendered partials/_header.html.haml (79.3ms)
+  Rendered partials/_nav_bar.html.haml (4.5ms)
+Completed 200 OK in 126ms (Views: 115.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:36:36 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (13.2ms)
+  Rendered partials/_header.html.haml (73.5ms)
+  Rendered partials/_nav_bar.html.haml (4.1ms)
+Completed 200 OK in 125ms (Views: 112.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:36:50 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (2.6ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (11.7ms)
+  Rendered partials/_header.html.haml (90.1ms)
+  Rendered partials/_nav_bar.html.haml (3.6ms)
+Completed 200 OK in 133ms (Views: 122.4ms | ActiveRecord: 4.8ms)
+
+
+Started DELETE "/customer_admins/sign_out" for ::1 at 2017-02-18 13:37:19 +0000
+Processing by CustomerAdmins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"s48m0KT2Zj1MISntpvQAKiVl9LfiRkUHhi2a8fV541gkON7Tb6HWAoGfVFY4FqDht4b3Pqv7l/pnQ8ueQZhFog=="}
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 13:37:19 +0000
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/customer_admins/sign_in" for ::1 at 2017-02-18 13:37:19 +0000
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (1.4ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (11.5ms)
+  Rendered partials/_header.html.haml (44.7ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customer_admins/sign_in" for ::1 at 2017-02-18 13:37:30 +0000
+Processing by CustomerAdmins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PSFixhTw6oRerT/4BtT+xvTu3o5gJWDsrLhmaSqsIDa23CbXUD7GEE91EptPCv5lw2yXH+zXA2MP13TngzlM3A==", "customer_admin"=>{"email"=>"niall+customerTwo@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall+customertwo@niallquinn.me' ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE `customer_admins` SET `current_sign_in_at` = '2017-02-18 13:37:30', `last_sign_in_at` = '2016-12-19 19:46:21', `sign_in_count` = 7, `updated_at` = '2017-02-18 13:37:30' WHERE `customer_admins`.`id` = 12[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 179ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 13:37:30 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (10.3ms)
+  Rendered partials/_header.html.haml (44.9ms)
+  Rendered partials/_nav_bar.html.haml (2.2ms)
+Completed 200 OK in 79ms (Views: 71.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 13:37:35 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (2.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (9.9ms)
+  Rendered partials/_header.html.haml (57.9ms)
+  Rendered partials/_nav_bar.html.haml (2.3ms)
+Completed 200 OK in 87ms (Views: 79.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 13:37:45 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (9.1ms)
+  Rendered partials/_header.html.haml (46.0ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 75ms (Views: 68.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 13:37:48 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (9.7ms)
+  Rendered partials/_header.html.haml (48.0ms)
+  Rendered partials/_nav_bar.html.haml (3.1ms)
+Completed 200 OK in 77ms (Views: 71.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 13:38:02 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (2.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (9.0ms)
+  Rendered partials/_header.html.haml (53.7ms)
+  Rendered partials/_nav_bar.html.haml (5.2ms)
+Completed 200 OK in 89ms (Views: 81.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 13:38:03 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (11.2ms)
+  Rendered partials/_header.html.haml (53.2ms)
+  Rendered partials/_nav_bar.html.haml (4.5ms)
+Completed 200 OK in 88ms (Views: 80.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:38:05 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.2ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (6.5ms)
+  Rendered partials/_header.html.haml (54.1ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 88ms (Views: 80.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:38:36 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.5ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (7.6ms)
+  Rendered partials/_header.html.haml (57.7ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 94ms (Views: 86.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:38:37 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.3ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (14.0ms)
+  Rendered partials/_header.html.haml (54.2ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 99ms (Views: 87.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:38:38 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.4ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (7.2ms)
+  Rendered partials/_header.html.haml (69.9ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 105ms (Views: 98.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:38:40 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (16.2ms)
+  Rendered partials/_header.html.haml (61.3ms)
+  Rendered partials/_nav_bar.html.haml (2.7ms)
+Completed 200 OK in 107ms (Views: 100.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:38:41 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.1ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (7.1ms)
+  Rendered partials/_header.html.haml (68.1ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 103ms (Views: 95.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:38:42 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (16.0ms)
+  Rendered partials/_header.html.haml (60.7ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 109ms (Views: 101.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:38:42 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.1ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (5.1ms)
+  Rendered partials/_header.html.haml (72.1ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 107ms (Views: 100.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:38:43 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (15.0ms)
+  Rendered partials/_header.html.haml (62.1ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 108ms (Views: 99.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:38:44 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.6ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (8.6ms)
+  Rendered partials/_header.html.haml (66.3ms)
+  Rendered partials/_nav_bar.html.haml (2.9ms)
+Completed 200 OK in 105ms (Views: 97.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/media_items/new" for ::1 at 2017-02-18 13:38:45 +0000
+Processing by MediaItemsController#new as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/new.html.erb within layouts/application
+  Rendered media_items/_form.html.erb (3.7ms)
+  Rendered media_items/new.html.erb within layouts/application (6.3ms)
+  Rendered partials/_header.html.haml (56.0ms)
+  Rendered partials/_nav_bar.html.haml (2.7ms)
+Completed 200 OK in 91ms (Views: 85.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/media_items" for ::1 at 2017-02-18 13:38:51 +0000
+Processing by MediaItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0QygjRLkl5mF8iM80zxIqJTswwt4YsyqApMuK3qTQWqF6cCDdhMz/5D83POJRg+1wDxWjyYvj21HUgdcRGV2Bg==", "media_item"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb254460880 @tempfile=#<Tempfile:/var/folders/ty/7wqs8qzd1qn1fl93t22lhl940000gn/T/RackMultipart20170218-90146-1owmc06.png>, @original_filename="Desktop.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"media_item[image]\"; filename=\"Desktop.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"Popdeem"}, "commit"=>"Create Media item"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `media_items` (`customer_id`, `created_at`, `updated_at`, `image`, `caption`) VALUES (2, '2017-02-18 13:38:51', '2017-02-18 13:38:51', 'Desktop.png', 'Popdeem')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/media_items/8
+Completed 302 Found in 12ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/media_items/8" for ::1 at 2017-02-18 13:38:51 +0000
+Processing by MediaItemsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT  `media_items`.* FROM `media_items` WHERE `media_items`.`id` = 8 LIMIT 1[0m
+  [1m[36mCustomerAdmin Load (0.6ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/show.html.erb within layouts/application
+  Rendered media_items/show.html.erb within layouts/application (0.8ms)
+  Rendered partials/_header.html.haml (54.5ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 76ms (Views: 69.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:38:53 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.7ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (6.9ms)
+  Rendered partials/_header.html.haml (52.8ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 89ms (Views: 79.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/media_items/new" for ::1 at 2017-02-18 13:38:56 +0000
+Processing by MediaItemsController#new as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/new.html.erb within layouts/application
+  Rendered media_items/_form.html.erb (3.2ms)
+  Rendered media_items/new.html.erb within layouts/application (7.3ms)
+  Rendered partials/_header.html.haml (52.5ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 87ms (Views: 82.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/media_items" for ::1 at 2017-02-18 13:39:02 +0000
+Processing by MediaItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qEWKWCuVmsQShsACHXQfTI6DNkiXV8GHQx0Y43z770X8oOpWT2I+ogeIP81HDlhR2lOjzMkagkAG3DGUQg3YKQ==", "media_item"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb253e8c328 @tempfile=#<Tempfile:/var/folders/ty/7wqs8qzd1qn1fl93t22lhl940000gn/T/RackMultipart20170218-90146-qe1u75.png>, @original_filename="coffee.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"media_item[image]\"; filename=\"coffee.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"Coffee"}, "commit"=>"Create Media item"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `media_items` (`customer_id`, `created_at`, `updated_at`, `image`, `caption`) VALUES (2, '2017-02-18 13:39:02', '2017-02-18 13:39:02', 'coffee.png', 'Coffee')[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/media_items/9
+Completed 302 Found in 15ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/media_items/9" for ::1 at 2017-02-18 13:39:02 +0000
+Processing by MediaItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mMediaItem Load (0.7ms)[0m  [1m[34mSELECT  `media_items`.* FROM `media_items` WHERE `media_items`.`id` = 9 LIMIT 1[0m
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/show.html.erb within layouts/application
+  Rendered media_items/show.html.erb within layouts/application (0.8ms)
+  Rendered partials/_header.html.haml (51.9ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 73ms (Views: 68.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:39:03 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.4ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (7.9ms)
+  Rendered partials/_header.html.haml (50.6ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 86ms (Views: 77.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:39:08 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (15.0ms)
+  Rendered partials/_header.html.haml (54.7ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 95ms (Views: 86.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:39:09 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.2ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.6ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (9.5ms)
+  Rendered partials/_header.html.haml (67.3ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 109ms (Views: 99.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:39:10 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (17.5ms)
+  Rendered partials/_header.html.haml (61.9ms)
+  Rendered partials/_nav_bar.html.haml (3.5ms)
+Completed 200 OK in 115ms (Views: 104.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:39:10 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.7ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (10.8ms)
+  Rendered partials/_header.html.haml (82.3ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 125ms (Views: 116.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:39:11 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.6ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (2.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (17.1ms)
+  Rendered partials/_header.html.haml (62.2ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 110ms (Views: 100.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:39:12 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.4ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.5ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (10.7ms)
+  Rendered partials/_header.html.haml (62.0ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 107ms (Views: 96.3ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/customer_admins/sign_out" for ::1 at 2017-02-18 13:39:32 +0000
+Processing by CustomerAdmins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bRT46a9oG1i0haFL6WxHj83qFMrN76TgzEj8kMsVYYvrJ2XYzX8pNjgzFnaoaLOYx2YK9oyIwqwDfDNjGDiQ6g=="}
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 12 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 13:39:32 +0000
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/customer_admins/sign_in" for ::1 at 2017-02-18 13:39:32 +0000
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (1.0ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (9.4ms)
+  Rendered partials/_header.html.haml (52.2ms)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customer_admins/sign_in" for ::1 at 2017-02-18 13:39:44 +0000
+Processing by CustomerAdmins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JIP1eoM+rjECWA+n7ePutRTeIPXtWM6OU67YRP7edRarl36LzFEP18oPezc7Jx5F0atDZRkqafdpnDNvnQzy8A==", "customer_admin"=>{"email"=>"niall+customerOne@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall+customerone@niallquinn.me' ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE `customer_admins` SET `current_sign_in_at` = '2017-02-18 13:39:45', `last_sign_in_at` = '2017-02-18 10:59:19', `last_sign_in_ip` = '::1', `sign_in_count` = 18, `updated_at` = '2017-02-18 13:39:45' WHERE `customer_admins`.`id` = 11[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 167ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 13:39:45 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (11.3ms)
+  Rendered partials/_header.html.haml (62.2ms)
+  Rendered partials/_nav_bar.html.haml (3.7ms)
+Completed 200 OK in 102ms (Views: 94.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 13:39:52 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (7.9ms)
+  Rendered partials/_header.html.haml (51.4ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 79ms (Views: 72.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:39:54 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (12.7ms)
+Started GET "/media_items" for ::1 at 2017-02-18 13:39:54 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (4.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (2.4ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (8.1ms)
+  Rendered partials/_header.html.haml (123.2ms)
+  Rendered partials/_nav_bar.html.haml (3.8ms)
+Completed 200 OK in 168ms (Views: 160.5ms | ActiveRecord: 3.2ms)
+
+
+  Rendered partials/_header.html.haml (74.6ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 122ms (Views: 102.3ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-18 13:39:55 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (14.5ms)
+Started GET "/posts" for ::1 at 2017-02-18 13:39:55 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (5.2ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (6.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (13.2ms)
+  Rendered partials/_header.html.haml (105.4ms)
+  Rendered partials/_nav_bar.html.haml (6.1ms)
+Completed 200 OK in 150ms (Views: 143.9ms | ActiveRecord: 2.5ms)
+
+
+  Rendered partials/_header.html.haml (64.6ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 134ms (Views: 110.8ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-02-18 13:39:55 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.6ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 1[0m
+  Rendered media_items/index.html.haml within layouts/application (10.0ms)
+  Rendered partials/_header.html.haml (79.8ms)
+  Rendered partials/_nav_bar.html.haml (3.2ms)
+Completed 200 OK in 122ms (Views: 110.9ms | ActiveRecord: 5.7ms)
+
+

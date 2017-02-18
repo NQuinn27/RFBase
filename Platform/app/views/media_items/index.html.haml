@@ -1,0 +1,21 @@
+%p#notice
+  - notice
+#content_head
+  #ch-title
+    %h1 Media Items
+  #ch-button
+    %a{:href => new_media_item_path}
+      %button.btn.btn-primary{:type => 'button'} New
+
+.media_container
+  .media_grid
+    - @media_items.each do |media_item|
+      .media_cell
+        .image_card
+          %img.media_image{:src => media_item.image }
+        .media_controls
+          %a.button_cell= link_to "<span class=\"glyphicon glyphicon-trash\"></span>".html_safe, media_item_path(media_item), data: {:confirm => 'Are you sure?'}, :method => :delete
+          %a.button_cell= link_to "<span class=\"glyphicon glyphicon-edit\"></span>".html_safe, edit_media_item_path(media_item)
+          %a.button_cell= link_to "<span class=\"glyphicon glyphicon-plus-sign\"></span>".html_safe, media_item_path(media_item)
+:javascript
+  $("#media_menu_item").toggleClass("active")
