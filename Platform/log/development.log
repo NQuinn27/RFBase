@@ -17766,3 +17766,203 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 195ms (Views: 121.1ms | ActiveRecord: 32.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-02-18 09:44:06 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (21.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/customer_admins/sign_in" for 127.0.0.1 at 2017-02-18 09:44:06 +0000
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (1.8ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (2492.4ms)
+  Rendered partials/_header.html.haml (173.5ms)
+Completed 200 OK in 2702ms (Views: 2677.8ms | ActiveRecord: 10.4ms)
+
+
+Started POST "/customer_admins/sign_in" for 127.0.0.1 at 2017-02-18 09:44:21 +0000
+Processing by CustomerAdmins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gu14yiHC8JeSgDtng9J5vRErzn1RZvYh1+TD5K+BFtM4lyUHqs5tkXwCYYNIw9Mi/qtAHKQ82wq/I7egHCQT5Q==", "customer_admin"=>{"email"=>"niall+customerOne@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mCustomerAdmin Load (8.2ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall+customerone@niallquinn.me' ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.4ms)[0m  [1m[33mUPDATE `customer_admins` SET `current_sign_in_at` = '2017-02-18 09:44:21', `last_sign_in_at` = '2017-02-16 08:14:25', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 16, `updated_at` = '2017-02-18 09:44:21' WHERE `customer_admins`.`id` = 11[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 201ms (ActiveRecord: 21.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-18 09:44:21 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (2.6ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 11 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (4.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (36.1ms)
+  Rendered partials/_header.html.haml (63.9ms)
+  Rendered partials/_nav_bar.html.haml (3.7ms)
+Completed 200 OK in 176ms (Views: 119.7ms | ActiveRecord: 15.3ms)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT GET_LOCK('1729042849948033830', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateMediaItems (20170218095418)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('1729042849948033830')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1729042849948033830', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateMediaItems (20170218095418)
+  [1m[35m (67.3ms)[0m  [1m[35mCREATE TABLE `media_items` (`id` int AUTO_INCREMENT PRIMARY KEY, `customer_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218095418')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1729042849948033830')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW CREATE TABLE `admins`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admins'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `ckeditor_assets`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'ckeditor_assets'[0m
+  [1m[35m (1.5ms)[0m  [1m[35mSHOW CREATE TABLE `customer_admins`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customer_admins'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `media_items`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `posts`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'posts'[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'ckeditor_assets'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customer_admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'media_items'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'posts'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1729042849948033830', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddMediaItemImageToMediaItem (20170218095733)
+  [1m[35m (37.6ms)[0m  [1m[35mALTER TABLE `media_items` ADD `image` varchar(255)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218095733')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1729042849948033830')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `admins`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admins'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `ckeditor_assets`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'ckeditor_assets'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `customer_admins`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customer_admins'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `media_items`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'media_items'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `posts`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'posts'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'ckeditor_assets'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customer_admins'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'media_items'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'posts'
+[0m
