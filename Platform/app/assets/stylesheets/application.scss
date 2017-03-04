@@ -17,7 +17,7 @@
  @import "bootstrap";
 
 $material_color : #22A7F0;
-$material_color_dark : #1B7DC8;
+$material_color_dark : #22A7F0;
 
 @mixin vertical-align($position: relative) {
   position: $position;
@@ -389,7 +389,7 @@ form.simple_form {
 }
 
 .posts_head {
-  background: #666666;
+  background: #9d9d9d;
   td {
     height: 10px;
     text-align: center;
@@ -399,7 +399,6 @@ form.simple_form {
     border-right: 1px solid white;
     border-left: 1px solid white;
     text-align: center;
-    color: white;
     font-size: 8pt;
     height: 5px;
   }
@@ -415,9 +414,22 @@ form.simple_form {
   td {
     text-align: left;
   }
+  td.alternate {
+    background: #f8f8f8;
+  }
   td.button_cell {
     text-align: center;
   }
+}
+
+span.glyphicon-trash {
+    color: #E42922;
+}
+span.glyphicon-plus-sign {
+  color: #289C3E;
+}
+span.glyphicon-edit {
+  color: #3068F5;
 }
 
 // Media Items
@@ -443,7 +455,8 @@ form.simple_form {
 }
 
 .media_controls {
-  background: #666666;
+  text-align: right;
+  background: #ddd;
   a {
     color: white;
     margin: 2px;
@@ -475,4 +488,10 @@ form.simple_form {
     width: calc(100% / 4);
     height: 100%;
   }
+}
+
+// events
+.event_image {
+  width: 30px;
+  height: 30px;
 }

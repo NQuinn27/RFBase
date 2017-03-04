@@ -21754,3 +21754,290 @@ Processing by MediaItemsController#index as HTML
 Completed 200 OK in 122ms (Views: 110.9ms | ActiveRecord: 5.7ms)
 
 
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) COLLATE utf8_bin PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) COLLATE utf8_bin PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('1729042849948033830', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (5.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreatePosts (20161119144351)
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE `posts` (`id` int AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161119144351')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCkeditorAssets (20161119144941)
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateCkeditorAssets < ActiveRecord::Migration[4.2] (called from load at /Users/niall/.rbenv/versions/2.3.0/bin/rake:23)
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE `ckeditor_assets` (`id` int AUTO_INCREMENT PRIMARY KEY, `data_file_name` varchar(255) NOT NULL, `data_content_type` varchar(255), `data_file_size` int, `assetable_id` int, `assetable_type` varchar(30), `type` varchar(30), `width` int, `height` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE  INDEX `idx_ckeditor_assetable_type`  ON `ckeditor_assets` (`assetable_type`, `type`, `assetable_id`) [0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE  INDEX `idx_ckeditor_assetable`  ON `ckeditor_assets` (`assetable_type`, `assetable_id`) [0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161119144941')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20161121081050)
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE `admins` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_admins_on_email`  ON `admins` (`email`) [0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_admins_on_reset_password_token`  ON `admins` (`reset_password_token`) [0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121081050')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateCustomerAdmins (20161121081100)
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE `customer_admins` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_customer_admins_on_email`  ON `customer_admins` (`email`) [0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_customer_admins_on_reset_password_token`  ON `customer_admins` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121081100')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCustomerIdToCustomerAdmin (20161121081450)
+  [1m[35m (12.1ms)[0m  [1m[35mALTER TABLE `customer_admins` ADD `customer_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121081450')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCustomers (20161121084547)
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121084547')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNamesToCustomerAdmin (20161121100538)
+  [1m[35m (9.6ms)[0m  [1m[35mALTER TABLE `customer_admins` ADD `first_name` varchar(255)[0m
+  [1m[35m (9.1ms)[0m  [1m[35mALTER TABLE `customer_admins` ADD `last_name` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121100538')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCustomerIdToPost (20161121103514)
+  [1m[35m (8.4ms)[0m  [1m[35mALTER TABLE `posts` ADD `customer_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121103514')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddApiKeyToCustomers (20161219103327)
+  [1m[35m (9.5ms)[0m  [1m[35mALTER TABLE `customers` ADD `api_key` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161219103327')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMediaItems (20170218095418)
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE `media_items` (`id` int AUTO_INCREMENT PRIMARY KEY, `customer_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218095418')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddMediaItemImageToMediaItem (20170218095733)
+  [1m[35m (10.6ms)[0m  [1m[35mALTER TABLE `media_items` ADD `image` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218095733')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCaptionToMediaItem (20170218100131)
+  [1m[35m (9.8ms)[0m  [1m[35mALTER TABLE `media_items` ADD `caption` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218100131')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-03-04 15:44:42', '2017-03-04 15:44:42')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1729042849948033830')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `admins`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admins'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `ckeditor_assets`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'ckeditor_assets'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `customer_admins`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customer_admins'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `media_items`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'media_items'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `posts`[0m
+  [1m[35m (1.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'posts'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'ckeditor_assets'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customer_admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'media_items'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'posts'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `customers` (`name`, `created_at`, `updated_at`) VALUES ('Customer One', '2017-03-04 15:52:37', '2017-03-04 15:52:37')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[31mDELETE FROM `customers` WHERE `customers`.`id` = 1[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `customers` (`name`, `created_at`, `updated_at`, `api_key`) VALUES ('Customer One', '2017-03-04 15:56:05', '2017-03-04 15:56:05', '6ea13662-1d98-4936-bdf9-c5299dc5e0bf')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE `customers` SET `name` = 'Change Name:\n', `updated_at` = '2017-03-04 15:57:00' WHERE `customers`.`id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `customers` SET `name` = 'Customer One', `updated_at` = '2017-03-04 15:57:18' WHERE `customers`.`id` = 2[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `customers` (`name`, `created_at`, `updated_at`, `api_key`) VALUES ('Customer Two', '2017-03-04 15:58:31', '2017-03-04 15:58:31', 'affd2a96-b90d-4932-8c62-744b221ed4c2')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2017-03-04 15:59:50 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/customer_admins/sign_in" for ::1 at 2017-03-04 15:59:50 +0000
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (1.2ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (2721.0ms)
+  Rendered partials/_header.html.haml (178.8ms)
+Completed 200 OK in 2928ms (Views: 2910.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/customer_admins/sign_up" for ::1 at 2017-03-04 15:59:56 +0000
+Processing by CustomerAdmins::RegistrationsController#new as HTML
+  Rendering customer_admins/registrations/new.html.haml within layouts/login
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT `customers`.* FROM `customers`[0m
+  Rendered customer_admins/shared/_links.html.erb (1.9ms)
+  Rendered customer_admins/registrations/new.html.haml within layouts/login (42.6ms)
+  Rendered partials/_header.html.haml (85.1ms)
+Completed 200 OK in 145ms (Views: 129.1ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/customer_admins" for ::1 at 2017-03-04 16:00:22 +0000
+Processing by CustomerAdmins::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2yVEz9EwlpnW02kIsIfzm5pVNaCSw4cXLKji4bWM4WZOS75NxHTphXLNQx8XpJYixGwRrQ3QmhsIH7vIlvOCwA==", "customer_admin"=>{"first_name"=>"Joe", "last_name"=>"Bloggs", "email"=>"niall+customerOne@niallquinn.me", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "customer_id"=>"2"}, "commit"=>"Sign up"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomerAdmin Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall+customerone@niallquinn.me' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO `customer_admins` (`email`, `encrypted_password`, `created_at`, `updated_at`, `customer_id`, `first_name`, `last_name`) VALUES ('niall+customerone@niallquinn.me', '$2a$11$EkNAJvKfXRZPVyJRLW2qCevY8PFEA9zMIJRPb0EBB6H/9R6liLNJW', '2017-03-04 16:00:22', '2017-03-04 16:00:22', 2, 'Joe', 'Bloggs')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE `customer_admins` SET `sign_in_count` = 1, `current_sign_in_at` = '2017-03-04 16:00:22', `last_sign_in_at` = '2017-03-04 16:00:22', `current_sign_in_ip` = '::1', `last_sign_in_ip` = '::1' WHERE `customer_admins`.`id` = 1[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 201ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/" for ::1 at 2017-03-04 16:00:22 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (5.8ms)
+  Rendered partials/_header.html.haml (60.7ms)
+  Rendered partials/_nav_bar.html.haml (4.3ms)
+Completed 200 OK in 109ms (Views: 84.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2017-03-04 16:00:32 +0000
+Processing by PostsController#new as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/new.haml within layouts/application
+  Rendered posts/_form.html.erb (11.5ms)
+  Rendered posts/new.haml within layouts/application (15.0ms)
+  Rendered partials/_header.html.haml (62.3ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 111ms (Views: 94.8ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/posts" for ::1 at 2017-03-04 16:02:06 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1/nH1DlI+Jq0fCG8sNpSBOps2OwAKA5tzt1c93+czIOedIwJirssLrIAPL+Px7JEonlUQg6N2dv9IGSdlbHAaQ==", "post"=>{"title"=>"Joe Bloggs to Tackle new Season!", "body"=>"<p>Nunc vitae efficitur justo, at ultricies orci. Quisque sollicitudin sit amet lorem in fermentum. Vestibulum id enim et arcu varius vehicula. Proin quis feugiat est. Aenean non suscipit nisl. Donec nisl arcu, tincidunt a lacinia eget, posuere sit amet odio. Nunc hendrerit nunc ac porttitor rhoncus. Nullam tincidunt magna eu eros porttitor fermentum. Curabitur erat eros, auctor vitae felis non, hendrerit facilisis purus. Aliquam tortor lectus, consequat at nibh et, ultricies vulputate dui. Ut faucibus nisi diam, interdum posuere urna elementum at. Curabitur et pellentesque urna. Ut leo leo, sollicitudin vitae ultrices id, vestibulum sit amet purus.</p>\r\n"}, "commit"=>"Create Post"}
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `body`, `created_at`, `updated_at`, `customer_id`) VALUES ('Joe Bloggs to Tackle new Season!', '<p>Nunc vitae efficitur justo, at ultricies orci. Quisque sollicitudin sit amet lorem in fermentum. Vestibulum id enim et arcu varius vehicula. Proin quis feugiat est. Aenean non suscipit nisl. Donec nisl arcu, tincidunt a lacinia eget, posuere sit amet odio. Nunc hendrerit nunc ac porttitor rhoncus. Nullam tincidunt magna eu eros porttitor fermentum. Curabitur erat eros, auctor vitae felis non, hendrerit facilisis purus. Aliquam tortor lectus, consequat at nibh et, ultricies vulputate dui. Ut faucibus nisi diam, interdum posuere urna elementum at. Curabitur et pellentesque urna. Ut leo leo, sollicitudin vitae ultrices id, vestibulum sit amet purus.</p>\r\n', '2017-03-04 16:02:06', '2017-03-04 16:02:06', 2)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 12ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-03-04 16:02:06 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/show.haml within layouts/application
+  Rendered posts/show.haml within layouts/application (2.2ms)
+  Rendered partials/_header.html.haml (67.5ms)
+  Rendered partials/_nav_bar.html.haml (3.0ms)
+Completed 200 OK in 94ms (Views: 87.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts" for ::1 at 2017-03-04 16:02:09 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.3ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (18.7ms)
+  Rendered partials/_header.html.haml (56.3ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 101ms (Views: 93.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/posts" for ::1 at 2017-03-04 16:07:47 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (7.3ms)
+  Rendered partials/_header.html.haml (1632.5ms)
+  Rendered partials/_nav_bar.html.haml (2.9ms)
+Completed 200 OK in 1662ms (Views: 1655.2ms | ActiveRecord: 2.4ms)
+
+
