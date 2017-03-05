@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   resources :media_items
   resources :events
 
+  get '/theme/', to: 'theme#edit'
+  patch "/theme" => "theme#update"
+
   namespace :api do
     namespace :v1 do
       resources :post, only: [:index], controller: "posts"

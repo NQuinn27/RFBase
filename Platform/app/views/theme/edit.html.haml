@@ -1,0 +1,6 @@
+#content_head
+  %h1 Edit Theme
+#content_body.group
+  = render "theme/form"
+:javascript
+  $("#theme_menu_item").toggleClass("active")

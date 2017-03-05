@@ -16,3 +16,5 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require_tree .
+//= require jquery.minicolors
+//= require jquery.minicolors.simple_form

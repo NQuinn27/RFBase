@@ -1,0 +1,13 @@
+.theme-form-wrapper
+  = simple_form_for (@theme) do |f|
+    = f.error_notification
+    .inputs
+      = f.input :primary_color, as: :minicolors
+      = f.input :primary_inverse_color, as: :minicolors
+      = f.input :primary_font_color, as: :minicolors
+      = f.input :secondary_font_color, as: :minicolors
+    .actions
+      = f.button :submit
+
+:javascript
+  $('input[type=text]').minicolors()

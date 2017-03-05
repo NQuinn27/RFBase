@@ -15,6 +15,7 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "jquery.minicolors";
 
 $material_color : #22A7F0;
 $material_color_dark : #22A7F0;
@@ -494,4 +495,27 @@ span.glyphicon-edit {
 .event_image {
   width: 30px;
   height: 30px;
+}
+
+
+//theme
+.minicolors-swatch {
+  left: 0 !important;
+  height: 100% !important;
+  top: 0 !important;
+  width: 30px !important;
+}
+
+.minicolors-theme-default.minicolors {
+  display: block;
+}
+.minicolors-theme-default .minicolors-input {
+  height: 30px;
+  text-align: left;
+  padding-left: 45px;
+  padding-right: 10px;
+}
+
+.theme-form-wrapper {
+  padding: 20px;
 }
