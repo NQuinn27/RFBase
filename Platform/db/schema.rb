@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170218154014) do
+ActiveRecord::Schema.define(version: 20170305143032) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin" do |t|
     t.string   "email",                  default: "", null: false
@@ -95,6 +95,17 @@ ActiveRecord::Schema.define(version: 20170218154014) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.integer  "customer_id"
+  end
+
+  create_table "themes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin" do |t|
+    t.string   "primary_color"
+    t.string   "primary_inverse_color"
+    t.string   "primary_font_color"
+    t.string   "secondary_font_color"
+    t.integer  "customer_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["customer_id"], name: "index_themes_on_customer_id", unique: true, using: :btree
   end
 
 end
