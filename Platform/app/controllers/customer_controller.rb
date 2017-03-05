@@ -1,3 +1,4 @@
+require 'securerandom'
 class CustomerController < ApplicationController
 
   def index

@@ -18,9 +18,9 @@
         - @posts.each do |post|
           %tr
             %td= raw(HTML_Truncator.truncate(post.title, 5))
-            %td= raw(HTML_Truncator.truncate(post.body, 10))
+            %td.alternate= raw(HTML_Truncator.truncate(post.body, 10))
             %td.button_cell= link_to "<span class=\"glyphicon glyphicon-trash\"></span>".html_safe, post_path(post), data: {:confirm => 'Are you sure?'}, :method => :delete
-            %td.button_cell= link_to "<span class=\"glyphicon glyphicon-edit\"></span>".html_safe, edit_post_path(post)
+            %td.alternate.button_cell= link_to "<span class=\"glyphicon glyphicon-edit\"></span>".html_safe, edit_post_path(post)
             %td.button_cell= link_to "<span class=\"glyphicon glyphicon-plus-sign\"></span>".html_safe, post_path(post)
 :javascript
   $("#posts_menu_item").toggleClass("active")

@@ -1,0 +1,30 @@
+%p#notice= notice
+#content_head
+  #ch-title
+    %h1 Events
+  #ch-button
+    %a{:href => new_event_path}
+      %button.btn.btn-primary{:type => 'button'} New
+.row
+.col-md-12
+  %table.table
+    %thead.posts_head
+      %tr
+        %th IMAGE
+        %th NAME
+        %th DATE
+        %th DELETE
+        %th EDIT
+        %th MORE
+    %tbody.posts_body
+      - @events.each do |event|
+        %tr
+          %td
+            =image_tag  event.image, :class => "event_image"
+          %td.alternate= event.name
+          %td= event.date.to_s
+          %td.alternate.button_cell= link_to "<span class=\"glyphicon glyphicon-trash\"></span>".html_safe, event_path(event), data: {:confirm => 'Are you sure?'}, :method => :delete
+          %td.button_cell= link_to "<span class=\"glyphicon glyphicon-edit\"></span>".html_safe, edit_event_path(event)
+          %td.alternate.button_cell= link_to "<span class=\"glyphicon glyphicon-plus-sign\"></span>".html_safe, event_path(event)
+:javascript
+  $("#calendar_menu_item").toggleClass("active")

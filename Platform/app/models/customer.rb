@@ -1,13 +1,12 @@
-require 'securerandom'
 class Customer < ApplicationRecord
   has_many :posts
   has_many :media_items
-
+  has_many :events
   before_save :generate_api_key
 
   def generate_api_key
-    if !self.api_key.present?
-      self.api_key = ::SecureRandom.uuid
+    if !api_key.present?
+      api_key = ::SecureRandom.uuid
     end
   end
 end

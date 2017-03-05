@@ -22041,3 +22041,1264 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 1662ms (Views: 1655.2ms | ActiveRecord: 2.4ms)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('1729042849948033830', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1729042849948033830')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `admins`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admins'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `ckeditor_assets`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'ckeditor_assets'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `customer_admins`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customer_admins'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `media_items`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'media_items'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `posts`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'posts'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'ckeditor_assets'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customer_admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'media_items'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'posts'
+[0m
+Started GET "/" for ::1 at 2017-03-05 13:23:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (30.0ms)
+  Rendered partials/_header.html.haml (648.0ms)
+  Rendered partials/_nav_bar.html.haml (3.0ms)
+Completed 200 OK in 758ms (Views: 695.9ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/media_items" for ::1 at 2017-03-05 13:23:32 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (5.0ms)
+  Rendered partials/_header.html.haml (56.4ms)
+  Rendered partials/_nav_bar.html.haml (3.1ms)
+Completed 200 OK in 93ms (Views: 76.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/media_items" for ::1 at 2017-03-05 13:23:33 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.5ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.4ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (5.7ms)
+  Rendered partials/_header.html.haml (73.3ms)
+  Rendered partials/_nav_bar.html.haml (3.6ms)
+Completed 200 OK in 105ms (Views: 97.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/media_items" for ::1 at 2017-03-05 13:23:35 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.4ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (5.6ms)
+  Rendered partials/_header.html.haml (64.5ms)
+  Rendered partials/_nav_bar.html.haml (4.3ms)
+Completed 200 OK in 99ms (Views: 91.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/media_items" for ::1 at 2017-03-05 13:23:36 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.2ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (7.9ms)
+  Rendered partials/_header.html.haml (63.2ms)
+  Rendered partials/_nav_bar.html.haml (3.3ms)
+Completed 200 OK in 100ms (Views: 93.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/media_items" for ::1 at 2017-03-05 13:23:36 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.4ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (6.5ms)
+  Rendered partials/_header.html.haml (62.4ms)
+  Rendered partials/_nav_bar.html.haml (3.1ms)
+Completed 200 OK in 98ms (Views: 90.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/media_items" for ::1 at 2017-03-05 13:24:06 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.8ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (4.4ms)
+  Rendered partials/_header.html.haml (46.7ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 98ms (Views: 64.6ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/media_items" for ::1 at 2017-03-05 13:24:07 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.2ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (4.2ms)
+  Rendered partials/_header.html.haml (50.5ms)
+  Rendered partials/_nav_bar.html.haml (2.3ms)
+Completed 200 OK in 79ms (Views: 72.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/media_items" for ::1 at 2017-03-05 13:24:08 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (7.2ms)
+  Rendered partials/_header.html.haml (62.9ms)
+  Rendered partials/_nav_bar.html.haml (3.1ms)
+Completed 200 OK in 98ms (Views: 91.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/media_items" for ::1 at 2017-03-05 13:24:09 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.3ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (1.0ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (5.7ms)
+  Rendered partials/_header.html.haml (63.4ms)
+  Rendered partials/_nav_bar.html.haml (3.3ms)
+Completed 200 OK in 96ms (Views: 88.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts" for ::1 at 2017-03-05 13:24:10 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (12.0ms)
+  Rendered partials/_header.html.haml (54.6ms)
+  Rendered partials/_nav_bar.html.haml (2.7ms)
+Completed 200 OK in 98ms (Views: 81.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/media_items" for ::1 at 2017-03-05 13:24:11 +0000
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (4.1ms)
+  Rendered partials/_header.html.haml (64.7ms)
+  Rendered partials/_nav_bar.html.haml (2.9ms)
+Completed 200 OK in 93ms (Views: 86.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/media_items" for ::1 at 2017-03-05 13:26:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MediaItemsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering media_items/index.html.haml within layouts/application
+  [1m[36mMediaItem Load (0.9ms)[0m  [1m[34mSELECT `media_items`.* FROM `media_items` WHERE `media_items`.`customer_id` = 2[0m
+  Rendered media_items/index.html.haml within layouts/application (5.2ms)
+  Rendered partials/_header.html.haml (650.1ms)
+  Rendered partials/_nav_bar.html.haml (4.2ms)
+Completed 200 OK in 732ms (Views: 675.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/events" for ::1 at 2017-03-05 13:26:13 +0000
+Processing by EventsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 5.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'rm-platform-devel.events' doesn't exist: SHOW FULL FIELDS FROM `events`):
+  
+app/controllers/events_controller.rb:9:in `index'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.9ms)
+Started GET "/events" for ::1 at 2017-03-05 13:26:55 +0000
+Processing by EventsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 6.2ms)
+
+
+  
+NoMethodError (undefined method `sort_by' for #<EventsController:0x007f851f1e6f58>):
+  
+app/controllers/events_controller.rb:9:in `index'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.9ms)
+Started GET "/events" for ::1 at 2017-03-05 13:27:49 +0000
+Processing by EventsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 5.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'rm-platform-devel.events' doesn't exist: SHOW FULL FIELDS FROM `events`):
+  
+app/controllers/events_controller.rb:9:in `index'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.8ms)
+Started GET "/" for ::1 at 2017-03-05 13:29:39 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.6ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (23.7ms)
+  Rendered partials/_header.html.haml (59.5ms)
+  Rendered partials/_nav_bar.html.haml (3.6ms)
+Completed 200 OK in 126ms (Views: 97.8ms | ActiveRecord: 7.2ms)
+
+
+Started DELETE "/customer_admins/sign_out" for ::1 at 2017-03-05 13:29:41 +0000
+Processing by CustomerAdmins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"i3EvPHumHFDCK7IPWCmA11Vs5XSg8htCvXrWnjIzrzUpkHlbSwmRZM2NkPAk+rSkmPdpv3w6Y32meip1KRZCIQ=="}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2017-03-05 13:29:41 +0000
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/customer_admins/sign_in" for ::1 at 2017-03-05 13:29:41 +0000
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (1.2ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (16.7ms)
+  Rendered partials/_header.html.haml (48.6ms)
+Completed 200 OK in 73ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customer_admins/sign_in" for ::1 at 2017-03-05 13:29:54 +0000
+Processing by CustomerAdmins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TpVG00UPG1rGEMX02wiN8wHpodWu4BX5BaIoJhlitFePrxGd+bN+FRZ0LE8dZ5k0W4q0AVY1WldhwwUvi+VGjg==", "customer_admin"=>{"email"=>"niall+customerOne@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall+customerone@niallquinn.me' ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.6ms)[0m  [1m[33mUPDATE `customer_admins` SET `current_sign_in_at` = '2017-03-05 13:29:54', `sign_in_count` = 2, `updated_at` = '2017-03-05 13:29:54' WHERE `customer_admins`.`id` = 1[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 180ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/" for ::1 at 2017-03-05 13:29:54 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (5.6ms)
+  Rendered partials/_header.html.haml (52.4ms)
+  Rendered partials/_nav_bar.html.haml (2.1ms)
+Completed 200 OK in 79ms (Views: 71.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2017-03-05 13:30:01 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (4.8ms)
+  Rendered partials/_header.html.haml (45.6ms)
+  Rendered partials/_nav_bar.html.haml (2.4ms)
+Completed 200 OK in 69ms (Views: 63.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2017-03-05 13:30:06 +0000
+Processing by PostsController#new as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/new.haml within layouts/application
+  Rendered posts/_form.html.erb (10.6ms)
+  Rendered posts/new.haml within layouts/application (13.8ms)
+  Rendered partials/_header.html.haml (54.8ms)
+  Rendered partials/_nav_bar.html.haml (2.6ms)
+Completed 200 OK in 92ms (Views: 84.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/new" for ::1 at 2017-03-05 13:30:07 +0000
+Processing by PostsController#new as HTML
+  [1m[36mCustomerAdmin Load (1.2ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/new.haml within layouts/application
+  Rendered posts/_form.html.erb (4.7ms)
+  Rendered posts/new.haml within layouts/application (7.0ms)
+  Rendered partials/_header.html.haml (58.0ms)
+  Rendered partials/_nav_bar.html.haml (2.5ms)
+Completed 200 OK in 89ms (Views: 83.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/events" for ::1 at 2017-03-05 13:30:08 +0000
+Processing by EventsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'rm-platform-devel.events' doesn't exist: SHOW FULL FIELDS FROM `events`):
+  
+app/controllers/events_controller.rb:9:in `index'
+Started GET "/events" for ::1 at 2017-03-05 13:30:09 +0000
+Processing by EventsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.4ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 5.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'rm-platform-devel.events' doesn't exist: SHOW FULL FIELDS FROM `events`):
+  
+app/controllers/events_controller.rb:9:in `index'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.0ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.6ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.3ms)
+Started GET "/events" for ::1 at 2017-03-05 13:31:58 +0000
+Processing by EventsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `firstName' for #<CustomerAdmin:0x007f8520932888>
+Did you mean?  first_name
+               first_name=
+               first_name?):
+  
+app/controllers/application_controller.rb:4:in `current_customer'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.9ms)
+Started GET "/events" for ::1 at 2017-03-05 13:32:11 +0000
+Processing by EventsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'rm-platform-devel.events' doesn't exist: SHOW FULL FIELDS FROM `events`):
+  
+app/controllers/events_controller.rb:9:in `index'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.4ms)
+Started GET "/customer_admins/sign_in" for ::1 at 2017-03-05 13:32:32 +0000
+Processing by CustomerAdmins::SessionsController#new as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-03-05 13:32:32 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (0.7ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 2[0m
+  Rendered posts/index.haml within layouts/application (20.5ms)
+  Rendered partials/_header.html.haml (53.6ms)
+  Rendered partials/_nav_bar.html.haml (3.4ms)
+Completed 200 OK in 98ms (Views: 89.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/events" for ::1 at 2017-03-05 13:32:35 +0000
+Processing by EventsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 2.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'rm-platform-devel.events' doesn't exist: SHOW FULL FIELDS FROM `events`):
+  
+app/controllers/events_controller.rb:9:in `index'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.4ms)
+Started GET "/events/new" for ::1 at 2017-03-05 13:32:38 +0000
+Processing by EventsController#new as HTML
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'rm-platform-devel.events' doesn't exist: SHOW FULL FIELDS FROM `events`):
+  
+app/controllers/events_controller.rb:19:in `new'
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/niall/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1729042849948033830', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateEvents (20170218151430)
+  [1m[35m (17.8ms)[0m  [1m[35mCREATE TABLE `events` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `caption` varchar(255), `date` date, `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218151430')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCustomerIdToEvent (20170218154014)
+  [1m[35m (16.7ms)[0m  [1m[35mALTER TABLE `events` ADD `customer_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218154014')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1729042849948033830')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `admins`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admins'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `ckeditor_assets`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'ckeditor_assets'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `customer_admins`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customer_admins'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `events`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'events'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `media_items`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'media_items'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `posts`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'posts'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'ckeditor_assets'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customer_admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'events'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'media_items'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'posts'
+[0m
+Started GET "/events/new" for ::1 at 2017-03-05 13:34:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by EventsController#new as HTML
+  [1m[36mCustomerAdmin Load (1.0ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (18.6ms)
+  Rendered events/new.html.erb within layouts/application (21.5ms)
+  Rendered partials/_header.html.haml (535.8ms)
+  Rendered partials/_nav_bar.html.haml (3.4ms)
+Completed 200 OK in 629ms (Views: 578.0ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/events" for ::1 at 2017-03-05 13:34:41 +0000
+Processing by EventsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.5ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT `events`.* FROM `events` WHERE `events`.`customer_id` = 2[0m
+  Rendering events/index.html.haml within layouts/application
+  Rendered events/index.html.haml within layouts/application (11.6ms)
+  Rendered partials/_header.html.haml (56.0ms)
+  Rendered partials/_nav_bar.html.haml (3.7ms)
+Completed 200 OK in 109ms (Views: 84.4ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/customer_admins/sign_out" for ::1 at 2017-03-05 13:49:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CustomerAdmins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tfaUNMpE5ui9ViYkvYcVHw5WwhvYH2xBBK/RxamWian+TnJrSCTswtCgvRhr33Y1WZpk+mIrykgEXQmizfjLFw=="}
+  [1m[36mCustomerAdmin Load (0.6ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-05 13:49:20 +0000
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/customer_admins/sign_in" for ::1 at 2017-03-05 13:49:20 +0000
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (1.1ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (405.8ms)
+  Rendered partials/_header.html.haml (68.9ms)
+Completed 200 OK in 485ms (Views: 483.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customer_admins/sign_in" for ::1 at 2017-03-05 13:49:26 +0000
+Processing by CustomerAdmins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fG6ONMwEVb7A00G3W8txs7Ymp0Z/qfjkFWuRz1TNbKa79vkI+MAP3yB/kXVCvq7TnZ6hStJcdSy0sX7nlQZjUA==", "customer_admin"=>{"email"=>"niall+test@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fG6ONMwEVb7A00G3W8txs7Ymp0Z/qfjkFWuRz1TNbKa79vkI+MAP3yB/kXVCvq7TnZ6hStJcdSy0sX7nlQZjUA==", "customer_admin"=>{"email"=>"niall+test@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (0.9ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (9.4ms)
+  Rendered partials/_header.html.haml (44.9ms)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customer_admins/sign_in" for ::1 at 2017-03-05 13:49:33 +0000
+Processing by CustomerAdmins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WHup4AJ6SDqB4HxrbMKEARUrsEJMp/wZiw4NoYqHe/Cf497cNr4SW2FMrKl1t1thPpO2TuFScdEq1OKJS0x0Bg==", "customer_admin"=>{"email"=>"niall+test@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall+test@niallquinn.me' ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.8ms)
+
+
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WHup4AJ6SDqB4HxrbMKEARUrsEJMp/wZiw4NoYqHe/Cf497cNr4SW2FMrKl1t1thPpO2TuFScdEq1OKJS0x0Bg==", "customer_admin"=>{"email"=>"niall+test@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (0.9ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (9.2ms)
+  Rendered partials/_header.html.haml (52.3ms)
+Completed 200 OK in 210ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `customers` (`name`, `created_at`, `updated_at`) VALUES ('John Smith', '2017-03-05 13:53:28', '2017-03-05 13:53:28')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO `customers` (`name`, `created_at`, `updated_at`) VALUES ('John Smith', '2017-03-05 13:54:17', '2017-03-05 13:54:17')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (19.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS `rm-platform-devel`[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) COLLATE utf8_bin PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) COLLATE utf8_bin PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1729042849948033830', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreatePosts (20161119144351)
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE `posts` (`id` int AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161119144351')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCkeditorAssets (20161119144941)
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateCkeditorAssets < ActiveRecord::Migration[4.2] (called from load at /Users/niall/.rbenv/versions/2.3.0/bin/rake:23)
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE `ckeditor_assets` (`id` int AUTO_INCREMENT PRIMARY KEY, `data_file_name` varchar(255) NOT NULL, `data_content_type` varchar(255), `data_file_size` int, `assetable_id` int, `assetable_type` varchar(30), `type` varchar(30), `width` int, `height` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE  INDEX `idx_ckeditor_assetable_type`  ON `ckeditor_assets` (`assetable_type`, `type`, `assetable_id`) [0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE  INDEX `idx_ckeditor_assetable`  ON `ckeditor_assets` (`assetable_type`, `assetable_id`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161119144941')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20161121081050)
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE `admins` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_admins_on_email`  ON `admins` (`email`) [0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_admins_on_reset_password_token`  ON `admins` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121081050')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateCustomerAdmins (20161121081100)
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE `customer_admins` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_customer_admins_on_email`  ON `customer_admins` (`email`) [0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_customer_admins_on_reset_password_token`  ON `customer_admins` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121081100')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCustomerIdToCustomerAdmin (20161121081450)
+  [1m[35m (9.9ms)[0m  [1m[35mALTER TABLE `customer_admins` ADD `customer_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121081450')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCustomers (20161121084547)
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121084547')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNamesToCustomerAdmin (20161121100538)
+  [1m[35m (10.3ms)[0m  [1m[35mALTER TABLE `customer_admins` ADD `first_name` varchar(255)[0m
+  [1m[35m (11.1ms)[0m  [1m[35mALTER TABLE `customer_admins` ADD `last_name` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121100538')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCustomerIdToPost (20161121103514)
+  [1m[35m (8.7ms)[0m  [1m[35mALTER TABLE `posts` ADD `customer_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121103514')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddApiKeyToCustomers (20161219103327)
+  [1m[35m (8.8ms)[0m  [1m[35mALTER TABLE `customers` ADD `api_key` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161219103327')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMediaItems (20170218095418)
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE `media_items` (`id` int AUTO_INCREMENT PRIMARY KEY, `customer_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218095418')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddMediaItemImageToMediaItem (20170218095733)
+  [1m[35m (9.0ms)[0m  [1m[35mALTER TABLE `media_items` ADD `image` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218095733')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCaptionToMediaItem (20170218100131)
+  [1m[35m (11.4ms)[0m  [1m[35mALTER TABLE `media_items` ADD `caption` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218100131')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20170218151430)
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE `events` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `caption` varchar(255), `date` date, `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218151430')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCustomerIdToEvent (20170218154014)
+  [1m[35m (9.9ms)[0m  [1m[35mALTER TABLE `events` ADD `customer_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218154014')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-03-05 14:02:47', '2017-03-05 14:02:47')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1729042849948033830')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `admins`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admins'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `ckeditor_assets`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'ckeditor_assets'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `customer_admins`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customer_admins'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `events`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'events'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `media_items`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'media_items'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `posts`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'posts'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'ckeditor_assets'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customer_admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'events'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'media_items'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'posts'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `admins` WHERE `admins`.`email` = 'niall@niallquinn.me' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `admins` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('niall@niallquinn.me', '$2a$11$eXr6t5pP5Gy0bXkNiStFeepi1xEJafL9FLfgvPH1LuZ2qu1KQI1ju', '2017-03-05 14:04:02', '2017-03-05 14:04:02')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `customers` (`name`, `created_at`, `updated_at`) VALUES ('John Smith', '2017-03-05 14:04:02', '2017-03-05 14:04:02')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomerAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall+johnsmith@niallquinn.me' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `customer_admins` (`email`, `encrypted_password`, `created_at`, `updated_at`, `customer_id`, `first_name`, `last_name`) VALUES ('niall+johnsmith@niallquinn.me', '$2a$11$WYVZOOsCKUoj9CHugDfui.UwC6eW63UtpUhtuIufnLghMxMpNNpcu', '2017-03-05 14:04:02', '2017-03-05 14:04:02', 1, 'John', 'Smith')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `customers` (`name`, `created_at`, `updated_at`) VALUES ('Sam Jones', '2017-03-05 14:04:02', '2017-03-05 14:04:02')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomerAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall+johnsmith@niallquinn.me' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `customers` (`name`, `created_at`, `updated_at`) VALUES ('Jennifer Kelly', '2017-03-05 14:04:03', '2017-03-05 14:04:03')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomerAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall+johnsmith@niallquinn.me' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/customer_admins/sign_in" for ::1 at 2017-03-05 14:06:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (1.4ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (482.1ms)
+  Rendered partials/_header.html.haml (68.9ms)
+Completed 200 OK in 587ms (Views: 559.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/customer_admins/sign_in" for ::1 at 2017-03-05 14:06:22 +0000
+Processing by CustomerAdmins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eTvejce7UmR2Wg1+htvhqjqcxx0oKx40YQ34QSc7Za++o6mx838IBZb23byfrj7KESTBEYXek/zA1xdp5vBqWQ==", "customer_admin"=>{"email"=>"niall@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall@niallquinn.me' ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.8ms)
+
+
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eTvejce7UmR2Wg1+htvhqjqcxx0oKx40YQ34QSc7Za++o6mx838IBZb23byfrj7KESTBEYXek/zA1xdp5vBqWQ==", "customer_admin"=>{"email"=>"niall@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (1.1ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (10.2ms)
+  Rendered partials/_header.html.haml (52.1ms)
+Completed 200 OK in 211ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customer_admins/sign_in" for ::1 at 2017-03-05 14:06:27 +0000
+Processing by CustomerAdmins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UFCAFaHLZy8nwMNyegh2UZW+KhWgv12ou6Ig3VNdadyXyPcplQ89TsdsE7BjfakxvgYsGQ1K0GAaeM/1kpZmKg==", "customer_admin"=>{"email"=>"niall@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall@niallquinn.me' ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.8ms)
+
+
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UFCAFaHLZy8nwMNyegh2UZW+KhWgv12ou6Ig3VNdadyXyPcplQ89TsdsE7BjfakxvgYsGQ1K0GAaeM/1kpZmKg==", "customer_admin"=>{"email"=>"niall@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (1.4ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (12.3ms)
+  Rendered partials/_header.html.haml (56.8ms)
+Completed 200 OK in 219ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customer_admins/sign_in" for ::1 at 2017-03-05 14:06:38 +0000
+Processing by CustomerAdmins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dJSD2KPYlYwxMCBEIvohVQTa6Y2h0gbSvWtONJ4ZSP2zDPTklxzP7dGc8IY7j/41L2LvgQwnixocsaEcX9JHCw==", "customer_admin"=>{"email"=>"niall@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mCustomerAdmin Load (0.8ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall@niallquinn.me' ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.8ms)
+
+
+Processing by CustomerAdmins::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dJSD2KPYlYwxMCBEIvohVQTa6Y2h0gbSvWtONJ4ZSP2zDPTklxzP7dGc8IY7j/41L2LvgQwnixocsaEcX9JHCw==", "customer_admin"=>{"email"=>"niall@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  Rendering customer_admins/sessions/new.html.haml within layouts/login
+  Rendered customer_admins/shared/_links.html.erb (1.4ms)
+  Rendered customer_admins/sessions/new.html.haml within layouts/login (11.6ms)
+  Rendered partials/_header.html.haml (58.6ms)
+Completed 200 OK in 214ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customer_admins/sign_in" for ::1 at 2017-03-05 14:06:48 +0000
+Processing by CustomerAdmins::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"syYf6vpZbE+FePHBxC3RP7r6LTywGiabbxgyW731Zgl0vmjWzp02LmXUIQPdWA5fkUIrMB3vq1POwt1zfD5p/w==", "customer_admin"=>{"email"=>"niall+johnSmith@niallquinn.me", "password"=>"[FILTERED]"}, "commit"=>"LOG IN"}
+  [1m[36mCustomerAdmin Load (0.9ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall+johnsmith@niallquinn.me' ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE `customer_admins` SET `current_sign_in_at` = '2017-03-05 14:06:48', `last_sign_in_at` = '2017-03-05 14:06:48', `current_sign_in_ip` = '::1', `last_sign_in_ip` = '::1', `sign_in_count` = 1, `updated_at` = '2017-03-05 14:06:48' WHERE `customer_admins`.`id` = 1[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 177ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-05 14:06:48 +0000
+Processing by PostsController#index as HTML
+  [1m[36mCustomerAdmin Load (1.1ms)[0m  [1m[34mSELECT  `customer_admins`.* FROM `customer_admins` WHERE `customer_admins`.`id` = 1 ORDER BY `customer_admins`.`id` ASC LIMIT 1[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering posts/index.haml within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`customer_id` = 1[0m
+  Rendered posts/index.haml within layouts/application (6.9ms)
+  Rendered partials/_header.html.haml (56.2ms)
+  Rendered partials/_nav_bar.html.haml (2.8ms)
+Completed 200 OK in 123ms (Views: 79.7ms | ActiveRecord: 5.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1729042849948033830', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1729042849948033830')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `admins`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admins'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `ckeditor_assets`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'ckeditor_assets'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `customer_admins`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customer_admins'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `events`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'events'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `media_items`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'media_items'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `posts`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'posts'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'ckeditor_assets'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customer_admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'events'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'media_items'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'posts'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (11.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS `rm-platform-devel`[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) COLLATE utf8_bin PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) COLLATE utf8_bin PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1729042849948033830', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreatePosts (20161119144351)
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE `posts` (`id` int AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161119144351')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCkeditorAssets (20161119144941)
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateCkeditorAssets < ActiveRecord::Migration[4.2] (called from load at /Users/niall/.rbenv/versions/2.3.0/bin/rake:23)
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE `ckeditor_assets` (`id` int AUTO_INCREMENT PRIMARY KEY, `data_file_name` varchar(255) NOT NULL, `data_content_type` varchar(255), `data_file_size` int, `assetable_id` int, `assetable_type` varchar(30), `type` varchar(30), `width` int, `height` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE  INDEX `idx_ckeditor_assetable_type`  ON `ckeditor_assets` (`assetable_type`, `type`, `assetable_id`) [0m
+  [1m[35m (101.8ms)[0m  [1m[35mCREATE  INDEX `idx_ckeditor_assetable`  ON `ckeditor_assets` (`assetable_type`, `assetable_id`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161119144941')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20161121081050)
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE TABLE `admins` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_admins_on_email`  ON `admins` (`email`) [0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_admins_on_reset_password_token`  ON `admins` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121081050')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateCustomerAdmins (20161121081100)
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE `customer_admins` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_customer_admins_on_email`  ON `customer_admins` (`email`) [0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_customer_admins_on_reset_password_token`  ON `customer_admins` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121081100')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCustomerIdToCustomerAdmin (20161121081450)
+  [1m[35m (10.3ms)[0m  [1m[35mALTER TABLE `customer_admins` ADD `customer_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121081450')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCustomers (20161121084547)
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121084547')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNamesToCustomerAdmin (20161121100538)
+  [1m[35m (10.5ms)[0m  [1m[35mALTER TABLE `customer_admins` ADD `first_name` varchar(255)[0m
+  [1m[35m (11.6ms)[0m  [1m[35mALTER TABLE `customer_admins` ADD `last_name` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121100538')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCustomerIdToPost (20161121103514)
+  [1m[35m (11.1ms)[0m  [1m[35mALTER TABLE `posts` ADD `customer_id` int[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161121103514')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddApiKeyToCustomers (20161219103327)
+  [1m[35m (10.4ms)[0m  [1m[35mALTER TABLE `customers` ADD `api_key` varchar(255)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161219103327')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMediaItems (20170218095418)
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE `media_items` (`id` int AUTO_INCREMENT PRIMARY KEY, `customer_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218095418')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddMediaItemImageToMediaItem (20170218095733)
+  [1m[35m (8.6ms)[0m  [1m[35mALTER TABLE `media_items` ADD `image` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218095733')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCaptionToMediaItem (20170218100131)
+  [1m[35m (8.8ms)[0m  [1m[35mALTER TABLE `media_items` ADD `caption` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218100131')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20170218151430)
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE `events` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `caption` varchar(255), `date` date, `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218151430')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCustomerIdToEvent (20170218154014)
+  [1m[35m (9.9ms)[0m  [1m[35mALTER TABLE `events` ADD `customer_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170218154014')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-03-05 14:20:05', '2017-03-05 14:20:05')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1729042849948033830')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `admins`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admins'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `ckeditor_assets`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'ckeditor_assets'[0m
+  [1m[35m (3.5ms)[0m  [1m[35mSHOW CREATE TABLE `customer_admins`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customer_admins'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `events`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'events'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `media_items`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'media_items'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `posts`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'posts'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'ckeditor_assets'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customer_admins'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'events'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'media_items'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'rm-platform-devel'
+  AND fk.table_name = 'posts'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `admins` WHERE `admins`.`email` = 'niall@niallquinn.me' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `admins` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('niall@niallquinn.me', '$2a$11$XNxA4U2cEF9YIn21R/nYHejqskrgHVhGTuF9FIcvV.EerwvsabVkW', '2017-03-05 14:20:13', '2017-03-05 14:20:13')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `customers` (`name`, `created_at`, `updated_at`) VALUES ('John Smith', '2017-03-05 14:20:13', '2017-03-05 14:20:13')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomerAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customer_admins` WHERE `customer_admins`.`email` = 'niall+johnsmith@niallquinn.me' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `customer_admins` (`email`, `encrypted_password`, `created_at`, `updated_at`, `customer_id`, `first_name`, `last_name`) VALUES ('niall+johnsmith@niallquinn.me', '$2a$11$zdZfmixi2vLbXwiZJ3q3guVYPPVBz011ajSqMNaTt3Kc00WyiIYr6', '2017-03-05 14:20:13', '2017-03-05 14:20:13', 1, 'John', 'Smith')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m

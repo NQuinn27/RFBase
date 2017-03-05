@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :articles
   resources :media_items
+  resources :events
 
   namespace :api do
     namespace :v1 do
