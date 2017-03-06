@@ -3,15 +3,13 @@ class ThemeController < ApplicationController
   before_action :authenticate_customer_admin!
   before_action :current_customer
 
-  def edit
-  end
 
   def show
   end
 
   def update
     if @theme.update_attributes(theme_params)
-      flash[:notice] = "Successfully updated theme!"
+      flash[:success] = "Successfully updated theme!"
       redirect_to '/theme'
     else
       flash[:alert] = "Error updating theme!"

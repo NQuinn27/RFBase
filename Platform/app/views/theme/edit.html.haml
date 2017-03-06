@@ -1,6 +1,7 @@
 #content_head
   %h1 Edit Theme
 #content_body.group
+  = flash_messages
   = render "theme/form"
 :javascript
   $("#theme_menu_item").toggleClass("active")
