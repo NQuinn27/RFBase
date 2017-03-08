@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170305143032) do
+ActiveRecord::Schema.define(version: 20170308104737) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin" do |t|
     t.string   "email",                  default: "", null: false
@@ -27,6 +27,30 @@ ActiveRecord::Schema.define(version: 20170305143032) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_admins_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "bios", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin" do |t|
+    t.string   "photo"
+    t.string   "name"
+    t.string   "date_of_birth"
+    t.text     "biography",     limit: 65535
+    t.integer  "customer_id"
+    t.string   "facebook_url"
+    t.string   "twitter_url"
+    t.string   "instagram_url"
+    t.string   "web_url"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["customer_id"], name: "index_bios_on_customer_id", unique: true, using: :btree
+  end
+
+  create_table "career_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin" do |t|
+    t.string   "year"
+    t.text     "details",    limit: 65535
+    t.integer  "bio_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["bio_id"], name: "index_career_items_on_bio_id", using: :btree
   end
 
   create_table "ckeditor_assets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin" do |t|
@@ -108,4 +132,5 @@ ActiveRecord::Schema.define(version: 20170305143032) do
     t.index ["customer_id"], name: "index_themes_on_customer_id", unique: true, using: :btree
   end
 
+  add_foreign_key "career_items", "bios"
 end
