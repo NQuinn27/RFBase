@@ -1,0 +1,13 @@
+= flash_messages
+#content_head
+  %h1 Edit Bio
+#content_body.group
+  = render "bio/form"
+:javascript
+  $("#bio_menu_item").toggleClass("active")
+  function clearNotice(){
+    $("#flashMessage").animate({opacity: 0}, 1500, function(){
+      $("#flashMessage").toggleClass('hidden');
+    });
+  }
+  setTimeout(clearNotice, 1000);

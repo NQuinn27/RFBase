@@ -1,0 +1,9 @@
+.theme-form-wrapper
+  = simple_form_for (@bio) do |f|
+    = f.error_notification
+    .inputs
+      = f.input :name
+      = f.input :date_of_birth
+      = f.input :biography
+    .actions
+      = f.button :submit

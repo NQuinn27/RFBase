@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :super_admins
   devise_for :customer_admins, :controllers => {
-    registrations: 'customer_admins/registrations',
     sessions: 'customer_admins/sessions',
     confirmations:  'customer_admins/confirmations',
     passwords:  'customer_admins/passwords',
@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   }
 
   devise_for :admins
+
   mount Ckeditor::Engine => '/ckeditor'
+
   root to: "posts#index"
 
   resources :posts
@@ -19,6 +21,9 @@ Rails.application.routes.draw do
 
   get '/theme/', to: 'theme#edit'
   patch "/theme" => "theme#update"
+
+  get '/bio/', to: 'bio#edit'
+  patch "/bio" => "bio#update"
 
   namespace :api do
     namespace :v1 do

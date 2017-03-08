@@ -1,0 +1,23 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @bio.name %>
+</p>
+
+<p>
+  <strong>DOB:</strong>
+  <%= @bio.date_of_birth %>
+</p>
+
+<h2>Career</h2>
+<% @bio.career_items.each do |item| %>
+  <p>
+    <strong>Year:</strong>
+    <%= item.year %>
+  </p>
+
+  <p>
+    <strong>Details:</strong>
+    <%= item.details %>
+  </p>
+<% end %>
