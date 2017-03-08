@@ -1,7 +1,13 @@
+= flash_messages
 #content_head
   %h1 Edit Theme
 #content_body.group
-  = flash_messages
   = render "theme/form"
 :javascript
   $("#theme_menu_item").toggleClass("active")
+  function clearNotice(){
+    $("#flashMessage").animate({opacity: 0}, 1500, function(){
+      $("#flashMessage").toggleClass('hidden');
+    });
+  }
+  setTimeout(clearNotice, 1000);
