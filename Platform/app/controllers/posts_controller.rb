@@ -17,10 +17,10 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.customer = @current_customer
     if @post.save
-      flash[:notice] = "Successfully created post!"
+      flash[:success] = "Successfully created post!"
       redirect_to post_path(@post)
     else
-      flash[:alert] = "Error creating new post!"
+      flash[:error] = "Error creating new post!"
       render :new
     end
   end
@@ -32,10 +32,10 @@ class PostsController < ApplicationController
   # Update action updates the post with the new information
   def update
     if @post.update_attributes(post_params)
-      flash[:notice] = "Successfully updated post!"
+      flash[:success] = "Successfully updated post!"
       redirect_to posts_path
     else
-      flash[:alert] = "Error updating post!"
+      flash[:error] = "Error updating post!"
       render :edit
     end
   end

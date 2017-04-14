@@ -1,0 +1,17 @@
+%h1 The Posts Index via API
+%table.table
+  %thead.posts_head
+    %tr
+      %th TITLE
+      %th EXCERPT
+      %th DELETE
+      %th EDIT
+      %th MORE
+  %tbody.posts_body
+    - @posts.each do |post|
+      %tr
+        %td= raw(HTML_Truncator.truncate(post.title, 5))
+        %td.alternate= raw(HTML_Truncator.truncate(post.body, 10))
+        %td.button_cell= link_to "<span class=\"glyphicon glyphicon-trash\"></span>".html_safe, post_path(post), data: {:confirm => 'Are you sure?'}, :method => :delete
+        %td.alternate.button_cell= link_to "<span class=\"glyphicon glyphicon-edit\"></span>".html_safe, edit_post_path(post)
+        %td.button_cell= link_to "<span class=\"glyphicon glyphicon-plus-sign\"></span>".html_safe, post_path(post)

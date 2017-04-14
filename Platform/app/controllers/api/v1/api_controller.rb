@@ -11,7 +11,10 @@ class Api::V1::ApiController < ActionController::Base
   end
 
   rescue_from ApiKeyMissing do
-    render json: {error: 'Api Key not found in header. Please add Api Key'}, status: :unauthorized
+    respond_to do |format|
+      format.json { render :json => {error: 'Api Key not found in header. Please add Api Key'}, status: :unauthorized }
+      format.html {render :template => 'api/v1/errors/noApiKey'}
+    end
   end
 
   rescue_from CustomerMissing do

@@ -23,5 +23,7 @@
             %td.button_cell= link_to "<span class=\"glyphicon glyphicon-trash\"></span>".html_safe, post_path(post), data: {:confirm => 'Are you sure?'}, :method => :delete
             %td.alternate.button_cell= link_to "<span class=\"glyphicon glyphicon-edit\"></span>".html_safe, edit_post_path(post)
             %td.button_cell= link_to "<span class=\"glyphicon glyphicon-plus-sign\"></span>".html_safe, post_path(post)
+    -# .flickr_pagination
+    -#   = will_paginate @patients, :container => false
 :javascript
   $("#posts_menu_item").toggleClass("active")
