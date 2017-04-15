@@ -7,7 +7,7 @@ class Api::V1::PostsController < Api::V1::ApiController
     @posts = @current_customer.posts
     respond_to do |format|
        format.json { render :json => @posts }
-       format.html
+       format.html { render :template => 'api/v1/posts/index' }
      end
   end
 
