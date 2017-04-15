@@ -60,3 +60,4 @@ gem 'haml'
 gem 'devise'
 gem "mini_magick"
 gem 'will_paginate'
+gem 'cloudinary'

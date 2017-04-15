@@ -3,6 +3,7 @@
   - @css = index % 2 == 0 ? '' : 'post-item-alternate'
   .post-item{class: @css}
     .post-image
+      = image_tag(post.icon_image_url, :alt => post.title)
     .post-content
       .post-title
         %h1

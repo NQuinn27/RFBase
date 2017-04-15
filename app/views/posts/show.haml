@@ -2,6 +2,7 @@
   %h1 Post detail
 #content_body.group
   %div.col-sm-11.col-xs-12.blog-content
+    = image_tag(@post.header_image_url, :alt => @post.title)
     %h2.text-center= @post.title
     %h5.text-center= @post.created_at.strftime('%b %d, %Y')
     %div= raw @post.body

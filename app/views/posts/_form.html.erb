@@ -23,6 +23,26 @@
   </div>
 
   <div class="form-group">
+    <%= label(:post, :header_image) %>
+    <p>Optimal dimensions: 750 * 370</p>
+    <%= f.hidden_field(:header_image_cache) %>
+    <%= f.file_field(:header_image) %>
+    <% if @post.header_image.present? %>
+      <%= image_tag(@post.header_image_url(:thumbnail), :alt => @post.title) %>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= label(:post, :icon_image) %>
+    <p>Optimal dimensions: 250 * 250</p>
+    <%= f.hidden_field(:icon_image_cache) %>
+    <%= f.file_field(:icon_image) %>
+    <% if @post.icon_image.present? %>
+      <%= image_tag(@post.icon_image_url(:thumbnail), :alt => @post.title) %>
+    <% end %>
+  </div>
+
+  <div class="form-group">
     <%= f.button :submit %>
   </div>
 <% end %>
