@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415150906) do
+ActiveRecord::Schema.define(version: 20170415163554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -124,6 +124,7 @@ ActiveRecord::Schema.define(version: 20170415150906) do
     t.integer  "customer_id"
     t.string   "header_image"
     t.string   "icon_image"
+    t.datetime "publish_date"
   end
 
   create_table "super_admins", force: :cascade do |t|

@@ -1,0 +1,10 @@
+= render 'api/v1/partials/header'
+.post-header.clearfix
+  = image_tag(@post.header_image_url, :alt => @post.title)
+.post-content
+  %h1
+    = @post.title
+  .divider
+  %p
+    = raw @post.body
+

@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   # New action for creating post
   def new
     @post = Post.new
+    @post.publish_date = DateTime.now
   end
 
   # Create action saves the post into database

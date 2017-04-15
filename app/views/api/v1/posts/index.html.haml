@@ -1,13 +1,15 @@
 = render 'api/v1/partials/header'
 - @posts.each_with_index do |post, index|
   - @css = index % 2 == 0 ? '' : 'post-item-alternate'
-  .post-item{class: @css}
-    .post-image
-      = image_tag(post.icon_image_url, :alt => post.title)
-    .post-content
-      .post-title
-        %h1
-          = post.title
-        .post-excerpt
-          = raw(HTML_Truncator.truncate(post.body, 10))
-
+  %a{:href => api_v1_post_path(post)}
+    .post-item{:class => @css}
+      .post-image
+        = image_tag(post.icon_image_url, :alt => post.title)
+      .post-content
+        .post-title
+          %h1
+            = post.title
+          .post-excerpt
+            = raw(HTML_Truncator.truncate(post.body, 10))
+      .post-caret
+        = image_tag("post_caret")

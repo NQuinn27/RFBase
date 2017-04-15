@@ -23,6 +23,10 @@
   </div>
 
   <div class="form-group">
+    <%= f.input :publish_date %>
+  </div>
+
+  <div class="form-group">
     <%= label(:post, :header_image) %>
     <p>Optimal dimensions: 750 * 370</p>
     <%= f.hidden_field(:header_image_cache) %>

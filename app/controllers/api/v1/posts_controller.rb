@@ -11,4 +11,12 @@ class Api::V1::PostsController < Api::V1::ApiController
      end
   end
 
+  def show
+    @post = Post.find(params[:id])
+    respond_to do |format|
+       format.json { render :json => @post }
+       format.html { render :template => 'api/v1/posts/show' }
+     end
+  end
+
 end
