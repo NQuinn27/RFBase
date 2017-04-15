@@ -1,9 +1,11 @@
 = render 'api/v1/partials/header'
 .post-header.clearfix
   = image_tag(@post.header_image_url, :alt => @post.title)
-.post-content
+.post-body
   %h1
     = @post.title
+  .post-date
+    = @post.publish_date.strftime("%B %-d, %Y")
   .divider
   %p
     = raw @post.body

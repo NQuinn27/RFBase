@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :current_customer
   # Index action to render all posts
   def index
-    @posts = @current_customer.posts
+    @posts = @current_customer.posts.order(:publish_date)
   end
 
   # New action for creating post
@@ -63,7 +63,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :header_image, :icon_image)
+    params.require(:post).permit(:title, :body, :header_image, :icon_image, :publish_date)
   end
 
   def find_post
