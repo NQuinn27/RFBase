@@ -1,0 +1,29 @@
+= render 'api/v1/partials/header'
+.calendar
+  .next-race-head
+    .next-race-title
+      NEXT RACE:
+      = @next_event.name
+    .next-race-time
+      .next-race-time-text
+        = @days
+        %span.days
+          Days to go
+    .next-race-map
+      %img{:src => @next_event.image_url}
+  .events-title
+    EVENTS
+  - @events.each do |event|
+    .event-item
+      .date
+        .big-number
+          = event.date.strftime("%-d")
+        .text
+          = event.date.strftime("%B").upcase
+      .text
+        %strong
+          = event.name
+        .br
+        = event.caption
+      .map
+        %img{:src => event.image_url}

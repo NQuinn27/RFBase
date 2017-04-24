@@ -1,0 +1,36 @@
+= render 'api/v1/partials/header'
+.bio
+  .bio-header{data: {color: @theme.primary_color}}
+    = image_tag(@bio.photo_url, :alt => "No Photo")
+    .bio-name
+      = @bio.name
+  .bio-body
+    .dob
+      .dob-title
+        DOB
+      .dob-content
+        = @bio.date_of_birth.strftime("%B %-d, %Y")
+    .lives
+      .lives-title
+        LIVES
+      .lives-content
+        = @bio.lives
+    .social-row
+      %a.facebook{:href => @bio.facebook_url}
+        = image_tag("facebook.svg")
+      %a.twitter{:href => @bio.twitter_url}
+        = image_tag("twitter.svg")
+      %a.instagram{:href => @bio.instagram_url}
+        = image_tag("instagram.svg")
+      %a.web{:href => @bio.web_url}
+        = image_tag("web.svg")
+    .bio-main
+      .bio-main-title
+        CAREER
+      .bio-main-body
+        = raw @bio.biography
+:javascript
+  $(document).on('turbolinks:load', function() {
+    const header = document.querySelector('.bio-header');
+    header.style.background = `${header.dataset.color}`;
+  });

@@ -20,7 +20,7 @@
       - @events.each do |event|
         %tr
           %td
-            =image_tag  event.image, :class => "event_image"
+            =image_tag  event.image_url, :class => "event_image"
           %td.alternate= event.name
           %td= event.date.to_s
           %td.alternate.button_cell= link_to "<span class=\"glyphicon glyphicon-trash\"></span>".html_safe, event_path(event), data: {:confirm => 'Are you sure?'}, :method => :delete

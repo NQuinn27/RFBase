@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415163554) do
+ActiveRecord::Schema.define(version: 20170423143527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20170415163554) do
   create_table "bios", force: :cascade do |t|
     t.string   "photo"
     t.string   "name"
-    t.string   "date_of_birth"
+    t.date     "date_of_birth"
     t.text     "biography"
     t.integer  "customer_id"
     t.string   "facebook_url"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20170415163554) do
     t.string   "web_url"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "lives"
     t.index ["customer_id"], name: "index_bios_on_customer_id", unique: true, using: :btree
   end
 

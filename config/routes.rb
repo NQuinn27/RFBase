@@ -28,12 +28,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :post, only: [:index, :show], controller: "posts"
-    end
-  end
-
-  namespace :mobile do
-    namespace :v1 do
-      resources :post, only: [:index], controller: "posts"
+      resources :bio, only: [:index], controller: "bios"
+      resources :calendar, only: [:index], controller: "calendar"
     end
   end
 end

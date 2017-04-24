@@ -2,8 +2,20 @@
   = simple_form_for (@bio) do |f|
     = f.error_notification
     .inputs
+      .form-group
+        = label(:bio, :photo)
+        %p Optimal dimensions: 250 * 250
+        = f.hidden_field(:photo_cache)
+        = f.file_field(:photo)
+        - if @bio.photo.present?
+          = image_tag(@bio.photo_url(:thumbnail), :alt => "No Photo")
       = f.input :name
-      = f.input :date_of_birth
-      = f.input :biography
+      = f.input :lives
+      = f.input :date_of_birth, as: :date, start_year: Date.today.year - 90, end_year: Date.today.year - 12, order: [:day, :month, :year]
+      = f.input :twitter_url
+      = f.input :web_url
+      = f.input :facebook_url
+      = f.input :instagram_url
+      = f.input :biography, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control"
     .actions
       = f.button :submit
