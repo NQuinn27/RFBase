@@ -4,7 +4,7 @@ class Api::V1::PostsController < Api::V1::ApiController
 
   def index
     puts "Made It"
-    @posts = @current_customer.posts.order(:publish_date)
+    @posts = @current_customer.posts.order(publish_date: :desc)
     respond_to do |format|
        format.json { render :json => @posts }
        format.html { render :template => 'api/v1/posts/index' }

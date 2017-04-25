@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :current_customer
   # Index action to render all posts
   def index
-    @posts = @current_customer.posts.order(:publish_date)
+    @posts = @current_customer.posts.order(publish_date: :desc)
   end
 
   # New action for creating post
