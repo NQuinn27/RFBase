@@ -16,6 +16,7 @@
       = f.input :web_url
       = f.input :facebook_url
       = f.input :instagram_url
-      = f.input :biography, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control"
+      = f.input :biography, as: :bootsy
+      </div>
     .actions
       = f.button :submit

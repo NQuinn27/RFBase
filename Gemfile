@@ -53,11 +53,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simple_form', '~> 3.2'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails'
-gem 'ckeditor', '~> 4.1'
-gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
+gem 'mini_magick', '~> 4.6'
+gem 'carrierwave', '~> 1.0'
+gem 'fog'
+gem 'bootsy', '>= 2.4.0'
 gem "html_truncator", "~>0.2"
 gem 'haml'
 gem 'devise'
-gem "mini_magick"
 gem 'will_paginate'
 gem 'cloudinary'

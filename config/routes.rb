@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   devise_for :admins
 
-  mount Ckeditor::Engine => '/ckeditor'
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
 
   root to: "posts#index"
 

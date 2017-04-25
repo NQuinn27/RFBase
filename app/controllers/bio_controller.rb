@@ -24,7 +24,7 @@ class BioController < ApplicationController
   private
 
   def bio_params
-    params.require(:bio).permit(:photo, :name, :date_of_birth, :biography, :facebook_url, :twitter_url, :instagram_url, :web_url, :photo, :lives)
+    params.require(:bio).permit(:photo, :name, :date_of_birth, :biography, :facebook_url, :twitter_url, :instagram_url, :web_url, :photo, :lives, :bootsy_image_gallery_id)
   end
 
   def find_bio
