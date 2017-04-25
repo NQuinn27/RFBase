@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require ckeditor/override
 //= require ckeditor/init
 //= require_tree .
 //= require jquery.minicolors
