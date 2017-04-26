@@ -1,0 +1,16 @@
+= render 'api/v1/partials/header'
+.media-show-page
+  %span.helper
+    %img.single-media-image{:src => @media_item.image_url(:mobile_thumb) }
+
+:javascript
+  $$(document).on('turbolinks:load', function() {
+    console.log("Hello");
+    el = $('.single-media-image');
+    data = el.data();
+    width = $(window).width();
+    console.log(width);
+    url = <%= cl_image_tag(@media_item.image_url, :width=>width, :crop=>"scale") %>;
+    console.log(url);
+    el.attr('src', url);
+  });

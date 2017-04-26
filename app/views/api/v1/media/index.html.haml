@@ -1,0 +1,5 @@
+= render 'api/v1/partials/header'
+- @media_items.each do |media_item|
+  %a{:href => api_v1_medium_path(media_item)}
+    .media-item
+      %img.media-image{:src => media_item.image_url(:mobile_thumb) }

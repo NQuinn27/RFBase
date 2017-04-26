@@ -17,6 +17,14 @@ class MediaItemImageUploader < CarrierWave::Uploader::Base
     resize_to_fit(50, 50)
   end
 
+  version :mobile_thumb do
+    resize_to_fit(410, 275)
+  end
+
+  version :mobile_single do
+    resize_to_fill(820, 550)
+  end
+
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir

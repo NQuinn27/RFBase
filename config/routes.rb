@@ -30,6 +30,7 @@ Rails.application.routes.draw do
       resources :post, only: [:index, :show], controller: "posts"
       resources :bio, only: [:index], controller: "bios"
       resources :calendar, only: [:index], controller: "calendar"
+      resources :media, only: [:index, :show], controller: "media"
     end
   end
 end
