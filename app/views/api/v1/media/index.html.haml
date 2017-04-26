@@ -1,5 +1,8 @@
 = render 'api/v1/partials/header'
-- @media_items.each do |media_item|
-  %a{:href => api_v1_medium_path(media_item)}
-    .media-item
-      %img.media-image{:src => media_item.image_url(:mobile_thumb) }
+.media-page
+  - @media_items.each_with_index do |media_item, index|
+    %a{:href => api_v1_medium_path(media_item)}
+      .media-item
+        %img.media-image{:src => media_item.image_url(:mobile_thumb) }
+    -if index % 2 != 0
+      %span.seperator
