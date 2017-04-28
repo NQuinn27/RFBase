@@ -1,6 +1,6 @@
 class Api::V1::PostsController < Api::V1::ApiController
-  before_action :load_and_verify_authenticity_token, only [:index]
-  before_action :current_customer, only [:index]
+  before_action :load_and_verify_authenticity_token, only: [:index]
+  before_action :current_customer, only: [:index]
 
   def index
     puts "Made It"
