@@ -1,7 +1,7 @@
 = render 'api/v1/partials/header'
 .bio
   .bio-header{data: {color: @theme.primary_color}}
-    = image_tag(@bio.photo_url, :alt => "No Photo")
+    = image_tag(@bio.photo_url(:main), :alt => "No Photo")
     .bio-name
       = @bio.name
   .bio-body

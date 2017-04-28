@@ -13,6 +13,10 @@ class BioPhotoUploader < CarrierWave::Uploader::Base
     resize_to_fit(50, 50)
   end
 
+  version :main do
+    resize_to_fill(250, 250)
+  end
+
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
