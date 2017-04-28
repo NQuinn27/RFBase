@@ -2,3 +2,6 @@
 .media-show-page
   %span.helper
     %img.single-media-image{:src => @media_item.image_url(:mobile_single) }
+    - if @media_item.caption.present?
+      %p.caption
+        = @media_item.caption
