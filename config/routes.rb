@@ -31,6 +31,7 @@ Rails.application.routes.draw do
       resources :bio, only: [:index], controller: "bios"
       resources :calendar, only: [:index], controller: "calendar"
       resources :media, only: [:index, :show], controller: "media"
+      resources :theme, only: [:index], controller: "theme"
     end
   end
 end
