@@ -1,7 +1,7 @@
 require 'date'
 class Api::V1::CalendarController < Api::V1::ApiController
-  before_action :load_and_verify_authenticity_token
-  before_action :current_customer
+  before_action :load_and_verify_authenticity_token, only: [:index]
+  before_action :current_customer, only: [:index]
 
   def index
     @events = @current_customer.events.sort_by{|e| e[:date]}

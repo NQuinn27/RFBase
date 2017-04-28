@@ -1,6 +1,6 @@
 class Api::V1::MediaController < Api::V1::ApiController
-  before_action :load_and_verify_authenticity_token
-  before_action :current_customer
+  before_action :load_and_verify_authenticity_token, only: [:index]
+  before_action :current_customer, only: [:index]
 
   def index
     @media_items = @current_customer.media_items.order(created_at: :desc)
