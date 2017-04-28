@@ -1,8 +1,8 @@
 class Api::V1::ApiController < ActionController::Base
 
   def load_and_verify_authenticity_token
-    # raise(ApiKeyMissing.new) unless request.headers["Api-Key"].present?
-    @api_key = Customer.find(1).api_key
+    raise(ApiKeyMissing.new) unless params["apiKey"].present?
+    @api_key = params["apiKey"]
   end
 
   def current_customer
