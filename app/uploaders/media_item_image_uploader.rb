@@ -18,7 +18,7 @@ class MediaItemImageUploader < CarrierWave::Uploader::Base
   end
 
   version :mobile_thumb do
-    resize_to_fit(410, 275)
+    resize_to_fill(205, 137)
   end
 
   version :mobile_single do
