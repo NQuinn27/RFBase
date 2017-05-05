@@ -4,8 +4,3 @@ one:
   year: MyString
   details: MyText
   bio: one
-
-two:
-  year: MyString
-  details: MyText
-  bio: two

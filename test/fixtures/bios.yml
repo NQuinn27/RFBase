@@ -3,18 +3,7 @@
 one:
   photo: MyString
   name: MyString
-  date_of_birth: MyString
-  biography: MyText
-  customer_id: 1
-  facebook_url: MyString
-  twitter_url: MyString
-  instagram_url: MyString
-  web_url: MyString
-
-two:
-  photo: MyString
-  name: MyString
-  date_of_birth: MyString
+  date_of_birth: <%= 5.day.ago.to_date %>
   biography: MyText
   customer_id: 1
   facebook_url: MyString

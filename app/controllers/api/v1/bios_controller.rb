@@ -10,5 +10,4 @@ class Api::V1::BiosController < Api::V1::ApiController
        format.html { render :template => 'api/v1/bios/show' }
      end
   end
-
 end
