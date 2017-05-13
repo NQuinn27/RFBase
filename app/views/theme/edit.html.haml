@@ -2,7 +2,14 @@
 #content_head
   %h1 Edit Theme
 #content_body.group
-  = render "theme/form"
+  .col-md-8
+    = render "theme/form"
+  .col-md-4
+    .theme-device-wrapper
+      .titlebar
+        %p.title-text Title
+      .theme-device-body
+      .theme-device-footer
 :javascript
   $("#theme_menu_item").toggleClass("active")
   function clearNotice(){
@@ -11,3 +18,9 @@
     });
   }
   setTimeout(clearNotice, 1000);
+
+  $(document).on('turbolinks:load', function() {
+    const titleBar = document.querySelector('.titlebar');
+    console.log(titleBar);
+    titleBar.style.background = "#40BADA";
+  });
