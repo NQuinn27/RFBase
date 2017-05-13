@@ -54,5 +54,5 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 5000 }
 
-  config.web_console.whitelisted_ips = '95.45.148.141'
+  config.web_console.whitelisted_ips = '95.45.148.141', '93.107.225.234'
 end

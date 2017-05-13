@@ -1,0 +1,14 @@
+<h2>Customer Settings</h2>
+
+<%= simple_form_for @customer_settings, :method => :patch do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :ios_env, collection: ['development', 'production'] %>
+    <%= f.input :ios_push_cert, as: :text %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

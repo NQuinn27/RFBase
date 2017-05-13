@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ios_push_cert: MyText
+  ios_env: MyString
+
+two:
+  ios_push_cert: MyText
+  ios_env: MyString

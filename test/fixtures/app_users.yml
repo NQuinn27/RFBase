@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: one
+  first_name: MyString
+  last_name: MyString
+  device_token: MyString
+  device_type: MyString
+  push_token: MyString
+  email: MyString
+  signup_date: 2017-05-13 11:58:38
+  last_login: 2017-05-13 11:58:38
+
+two:
+  customer: two
+  first_name: MyString
+  last_name: MyString
+  device_token: MyString
+  device_type: MyString
+  push_token: MyString
+  email: MyString
+  signup_date: 2017-05-13 11:58:38
+  last_login: 2017-05-13 11:58:38

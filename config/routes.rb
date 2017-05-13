@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   get '/bio/', to: 'bio#edit'
   patch "/bio" => "bio#update"
 
+  get '/customer_settings/', to: 'customer_settings#edit'
+  patch "/customer_settings" => "customer_settings#update"
+
   namespace :api do
     namespace :v1 do
       resources :post, only: [:index, :show], controller: "posts"
@@ -32,6 +35,7 @@ Rails.application.routes.draw do
       resources :calendar, only: [:index], controller: "calendar"
       resources :media, only: [:index, :show], controller: "media"
       resources :theme, only: [:index], controller: "theme"
+      resources :user, only: [:create, :show, :update], controller: "app_users"
     end
   end
 end
