@@ -8,10 +8,13 @@ class CustomerSettingsController < ApplicationController
   end
 
   def update
+    puts "Customer ID: #{@current_customer.id}"
     if params[:customer_setting][:ios_env]
+      puts "ios_env: #{params[:customer_setting][:ios_env]}"
       @current_customer.ios_environment = params[:customer_setting][:ios_env]
     end
     if params[:customer_setting][:ios_push_cert]
+      puts "ios_env: #{params[:customer_setting][:ios_push_cert]}"
       @current_customer.ios_push_cert = params[:customer_setting][:ios_push_cert]
     end
     @current_customer.save!
