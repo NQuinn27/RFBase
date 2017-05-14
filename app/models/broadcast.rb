@@ -12,12 +12,12 @@ class Broadcast < ApplicationRecord
       return
     end
     users.each do |user|
-      if user.device_token == nil
+      if user.push_token == nil
         next
       end
       apn = Houston::Client.development
       apn.certificate = customer.ios_push_cert
-      notification = Houston::Notification.new(device: user.device_token)
+      notification = Houston::Notification.new(device: user.push_token)
       notification.alert = self.title
       notification.custom_data = {
         title: self.title,
