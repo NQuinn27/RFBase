@@ -4,7 +4,7 @@
   <div class="form-inputs">
     <%= f.file_field :image %>
     <% if f.object.image? %>
-      <%= image_tag f.object.image %>
+      <%= image_tag f.object.image_url %>
       <%= f.label :remove_image %>
       <%= f.check_box :remove_image %>
     <% end %>
