@@ -2,12 +2,12 @@
 
 one:
   customer: one
-  first_name: MyString
-  last_name: MyString
-  device_token: MyString
-  device_type: MyString
-  push_token: MyString
-  email: MyString
+  first_name: John
+  last_name: Doe
+  device_token: DeviceToken
+  device_type: iOS
+  push_token: PushToken
+  email: john@johndoe.com
   signup_date: 2017-05-13 11:58:38
   last_login: 2017-05-13 11:58:38
 

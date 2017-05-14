@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170513131213) do
+ActiveRecord::Schema.define(version: 20170514161852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,15 @@ ActiveRecord::Schema.define(version: 20170513131213) do
     t.integer  "image_gallery_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "broadcasts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "customer_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["customer_id"], name: "index_broadcasts_on_customer_id", using: :btree
   end
 
   create_table "career_items", force: :cascade do |t|
@@ -195,5 +204,6 @@ ActiveRecord::Schema.define(version: 20170513131213) do
   end
 
   add_foreign_key "app_users", "customers"
+  add_foreign_key "broadcasts", "customers"
   add_foreign_key "career_items", "bios"
 end

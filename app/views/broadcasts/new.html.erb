@@ -1,0 +1,15 @@
+<div id="content_head">
+  <h1>New Broadcast Message</h1>
+</div>
+
+<%= render 'form', broadcast: @broadcast %>
+
+<script type="text/javascript">
+  $("#broadcast_menu_item").toggleClass("active")
+  function clearNotice(){
+    $("#flashMessage").animate({opacity: 0}, 1500, function(){
+      $("#flashMessage").toggleClass('hidden');
+    });
+  }
+  setTimeout(clearNotice, 1000);
+</script>

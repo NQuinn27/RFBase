@@ -22,12 +22,6 @@
       .theme-device-footer
 :javascript
 
-  const titleBar = document.querySelector('.titlebar');
-  const titleText = document.querySelector('.title-text');
-  const primaryText = document.querySelector('.news-item-title');
-  const secondaryText = document.querySelector('.news-item-subtitle');
-  const footer = document.querySelector('.theme-device-footer');
-
   $("#theme_menu_item").toggleClass("active")
   function clearNotice(){
     $("#flashMessage").animate({opacity: 0}, 1500, function(){
@@ -35,6 +29,12 @@
     });
   }
   setTimeout(clearNotice, 1000);
+
+  var titleBar = document.querySelector('.titlebar');
+  var titleText = document.querySelector('.title-text');
+  var primaryText = document.querySelector('.news-item-title');
+  var secondaryText = document.querySelector('.news-item-subtitle');
+  var footer = document.querySelector('.theme-device-footer');
 
   $(document).on('turbolinks:load', function() {
     const titleBar = document.querySelector('.titlebar');

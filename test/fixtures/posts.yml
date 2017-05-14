@@ -3,3 +3,5 @@
 one:
   title: MyString
   body: MyText
+  header_image: HeaderUrl
+  icon_image: IconUrl

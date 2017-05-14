@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :broadcasts
   devise_for :super_admins
   devise_for :customer_admins, :controllers => {
     sessions: 'customer_admins/sessions',
@@ -27,6 +28,8 @@ Rails.application.routes.draw do
 
   get '/customer_settings/', to: 'customer_settings#edit'
   patch "/customer_settings" => "customer_settings#update"
+
+  get '/broadcast/', to: 'broadcasts#new'
 
   namespace :api do
     namespace :v1 do

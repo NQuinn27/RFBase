@@ -1,14 +1,31 @@
-<h2>Customer Settings</h2>
+<div id="content_head">
+  <h1>Customer Settings</h1>
+</div>
 
-<%= simple_form_for @customer_settings, :method => :patch do |f| %>
-  <%= f.error_notification %>
+<div id="content_body" class="group">
+  <div class="theme-form-wrapper">
+    <%= simple_form_for @customer_settings, :method => :patch do |f| %>
+      <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :ios_env, collection: ['development', 'production'] %>
-    <%= f.input :ios_push_cert, as: :text %>
+      <div class="form-inputs">
+        <%= f.input :ios_env, collection: ['development', 'production'] %>
+        <%= f.input :ios_push_cert, as: :text %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+<script type="text/javascript">
+  $("#customer_settings_menu_item").toggleClass("active")
+  function clearNotice(){
+    $("#flashMessage").animate({opacity: 0}, 1500, function(){
+      $("#flashMessage").toggleClass('hidden');
+    });
+  }
+  setTimeout(clearNotice, 1000);
+
+</script>
